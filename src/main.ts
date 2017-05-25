@@ -1,3 +1,3 @@
-const main = (): string => "it works!";
-console.log(main());
+const main = (): string => "it works";
+
 export default main;

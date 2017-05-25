@@ -5,7 +5,7 @@ const pairs: MessageTransactionPair[] = [
     message: "VISA1234 15.05.17 12:45 оплата услуг 100р TELE2 Баланс: 1000.50р",
     transaction: {
       card: "VISA1234",
-      datetime: "15.03.17 12:45",
+      datetime: 1494852300,
       vendor: "TELE2",
       value: 100,
       type: "outcome",
