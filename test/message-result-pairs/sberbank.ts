@@ -1,6 +1,4 @@
-// @flow
-
-import type { Transaction, MessageTransactionPair } from '../../src/types/common'
+import { Transaction, MessageTransactionPair } from "../../src/types/common";
 
 const pairs: MessageTransactionPair[] = [
   {
@@ -16,4 +14,4 @@ const pairs: MessageTransactionPair[] = [
   }
 ];
 
-export default pairs
+export default pairs;

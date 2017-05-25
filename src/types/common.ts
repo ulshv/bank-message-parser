@@ -1,5 +1,3 @@
-// @flow
-
 export type Transaction = {
   card: string,
   datetime: number,
@@ -12,4 +10,4 @@ export type Transaction = {
 export type MessageTransactionPair = {
   message: string,
   transaction: Transaction
-}
+};
