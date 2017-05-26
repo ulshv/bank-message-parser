@@ -1,8 +1,15 @@
 import { expect } from "chai";
 import smsBankParser from "../src/main";
+import messageResultPairs from './test-pairs/message-result';
 
+/*
 describe("sms-bank-parser", () => {
-  it("should return `it works` on main function call", () => {
-    expect(smsBankParser()).to.equal("it works")
+  describe("main", () => {
+    messageResultPairs.forEach(pair => {
+      it("should return correct Transaction on given Message", () => {
+        expect(smsBankParser(pair.message)).to.eql(pair.transaction);
+      });
+    });
   });
 });
+*/

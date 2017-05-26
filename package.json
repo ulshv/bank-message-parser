@@ -8,6 +8,7 @@
     "precommit": "lint-staged",
     "start": "npm run webpack && node ./dist/bundle.js",
     "test": "mocha ./test/**/*.spec.ts --require ts-node/register",
+    "prettier": "prettier src/* test/*",
     "webpack": "webpack"
   },
   "lint-staged": {

@@ -1,13 +1,22 @@
+export type Message = string;
+
 export type Transaction = {
   card: string,
-  datetime: number,
+  datetime: string,
   hash: string,
   type: string,
   value: number,
   vendor: string
 };
 
-export type MessageTransactionPair = {
-  message: string,
-  transaction: Transaction
+export type Bank = {
+  id: number,
+  name: string
 };
+
+export type Pattern = {
+  id: number,
+  bank_id: number,
+  regexp: RegExp
+};
+
