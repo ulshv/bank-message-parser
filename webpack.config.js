@@ -14,5 +14,8 @@ module.exports = {
         use: ["babel-loader", "ts-loader"]
       }
     ]
-  }
+  },
+  resolve: {
+    extensions: ['.ts', '.js'],
+  },
 };
