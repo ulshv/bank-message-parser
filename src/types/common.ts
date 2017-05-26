@@ -19,3 +19,5 @@ export type Pattern = {
   bank_id: number,
   regexp: RegExp
 };
+
+export type Null = null | void;

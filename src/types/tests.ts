@@ -1,7 +1,8 @@
 import {
   Message,
   Transaction,
-  Pattern
+  Pattern,
+  Null
 } from './common';
 
 export type MessageTransactionPair = {
@@ -11,5 +12,5 @@ export type MessageTransactionPair = {
 
 export type MessagePatternPair = {
   message: Message,
-  pattern?: Pattern
+  pattern: Pattern | Null
 };

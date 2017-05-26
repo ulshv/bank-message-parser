@@ -9,6 +9,10 @@ const banks: Bank[] = [
   {
     id: 2,
     name: 'tinkoff'
+  },
+  {
+    id: 3,
+    name: 'raiffeisen'
   }
 ];
 
