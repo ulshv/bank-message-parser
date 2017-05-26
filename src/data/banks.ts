@@ -14,12 +14,5 @@ const banks: Bank[] = [
 
 export default banks;
 
-export const banksByIds = arrayToObjectWithIds(banks);
+export const banksById = arrayToObjectWithIds(banks);
 
-/*
-const o: { [id: number]: Bank } = {};
-export const banksByIds = banks.reduce((obj, bank) => {
-  obj[bank.id] = bank;
-  return obj;
-}, o);
-*/

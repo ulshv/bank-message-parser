@@ -1,4 +1,8 @@
-import { Message, Transaction } from './common';
+import {
+  Message,
+  Transaction,
+  Pattern
+} from './common';
 
 export type MessageTransactionPair = {
   message: Message,
@@ -7,5 +11,5 @@ export type MessageTransactionPair = {
 
 export type MessagePatternPair = {
   message: Message,
-  pattern_id: number | null
+  pattern?: Pattern
 };

@@ -1,4 +1,5 @@
 import { Pattern } from '../types';
+import { arrayToObjectWithIds } from '../utils';
 
 const patterns: Pattern[] = [
   {
@@ -15,3 +16,4 @@ const patterns: Pattern[] = [
 
 export default patterns;
 
+export const patternsById = arrayToObjectWithIds(patterns);

@@ -1,9 +1,8 @@
 import { expect } from "chai";
-import { getPatternByMessage } from "../src/utils";
 import messagePatternPairs from './test-pairs/message-pattern';
-import banks, { banksByIds } from '../src/data/banks';
 
 describe("utils", () => {
+  /*
   describe("getPatternByMessage()", () => {
     messagePatternPairs.forEach(pair => {
       it(`should return pattern with id=${pair.pattern_id} for "${pair.message}`, () => {
@@ -17,4 +16,5 @@ describe("utils", () => {
       });
     });
   });
+  */
 });
