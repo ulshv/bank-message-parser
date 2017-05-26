@@ -14,3 +14,4 @@ const patterns: Pattern[] = [
 ]
 
 export default patterns;
+

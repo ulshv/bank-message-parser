@@ -19,4 +19,3 @@ export type Pattern = {
   bank_id: number,
   regexp: RegExp
 };
-

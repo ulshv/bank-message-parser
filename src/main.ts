@@ -5,7 +5,6 @@ const main = (message: Message): Transaction | void => {
   const pattern = getPatternByMessage(message);
   if (!pattern) return;
 
-
 }
 
 export default main;
