@@ -1,12 +1,3 @@
-import {
-  Message,
-  Bank,
-  Pattern
-} from './types/common';
-
-import banks from './data/banks'
-import patterns from './data/patterns';
-
 /**
  * Convert array like `[ {id: 5, ...etc } ]` to object like `{ 5: { id: 5, ...etc }}`
  */
