@@ -16,3 +16,15 @@ export function arrayToObjectWithIds <T extends { id: number }> (arr: T[]): { [i
   return objectWithIds;
 }
 
+/**
+ * Trim too long messages using '...' separator in the middle
+ */
+export const trimText = (
+  text: string,
+  limit: number = 55,
+  separator: string = ' ... '
+): string => {
+  if (text.length <= limit) return text;
+  const half = Math.round((limit - separator.length) / 2)
+  return text.substr(0, half) + separator + text.substr(text.length - half, text.length);
+}
