@@ -5,17 +5,9 @@
   "main": "src/main.ts",
   "scripts": {
     "build": "babel main.ts -d build",
-    "precommit": "lint-staged",
     "start": "npm run webpack && node ./dist/bundle.js",
     "test": "mocha ./test/**/*.spec.ts --require ts-node/register",
-    "prettier": "prettier src/* test/*",
     "webpack": "webpack"
-  },
-  "lint-staged": {
-    "*.ts": [
-      "prettier --write",
-      "git add"
-    ]
   },
   "author": "",
   "license": "ISC",
@@ -30,10 +22,7 @@
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.22",
     "chai": "^3.5.0",
-    "husky": "^0.13.3",
-    "lint-staged": "^3.5.0",
     "mocha": "^3.4.2",
-    "prettier": "^1.3.1",
     "ts-loader": "^2.1.0",
     "ts-node": "^3.0.4",
     "typescript": "^2.3.3"
