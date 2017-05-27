@@ -18,12 +18,7 @@ export type Transaction = {
 
 export type Bank = {
   id: number,
-  name: string
-};
-
-export type BankModule = {
-  id: number,
-  bank: Bank,
+  name: string,
   patterns: Pattern[]
   testCases: TestCase[],
   parser: Parser,
