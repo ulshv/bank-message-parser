@@ -15,6 +15,7 @@ export default bankModules;
 
 export const banks: Bank[] = bankModules.map(bm => bm.bank);
 export const banksById = arrayToObjectWithIds(banks);
+export const bankModulesById = arrayToObjectWithIds(bankModules);
 
 export const patterns: Pattern[] = bankModules
   .reduce((arr, bm) => arr.concat(bm.patterns), [] as Pattern[]);

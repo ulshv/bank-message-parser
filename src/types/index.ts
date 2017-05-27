@@ -22,9 +22,11 @@ export type Bank = {
 };
 
 export type BankModule = {
+  id: number,
   bank: Bank,
   patterns: Pattern[]
   testCases: TestCase[],
+  parser: Parser,
 };
 
 export type TestCase = {
@@ -32,3 +34,7 @@ export type TestCase = {
   pattern_id: PatternId | null,
   transaction: Transaction | null,
 };
+
+export interface Parser {
+  (message: Message, pattern: Pattern): Transaction | void;
+}
