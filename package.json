@@ -6,7 +6,7 @@
   "scripts": {
     "build": "babel main.ts -d build",
     "start": "npm run webpack && node ./dist/bundle.js",
-    "test": "mocha ./test/**/*.spec.ts --require ts-node/register",
+    "test": "mocha ./tests/**/*.spec.ts --require ts-node/register",
     "webpack": "webpack"
   },
   "author": "",
