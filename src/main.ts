@@ -3,7 +3,7 @@ import {
   Message,
   Transaction,
   Pattern
-} from './types/common';
+} from './types';
 
 export const getPatternByMessage = (message: Message): Pattern | void =>
   patterns.find(pattern => pattern.regexp.test(message));
