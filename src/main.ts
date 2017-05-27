@@ -1,4 +1,4 @@
-import patterns from './data/patterns';
+import { banks, patterns } from './banks';
 import {
   Message,
   Transaction,
@@ -16,3 +16,4 @@ const main = (message: Message): Transaction | void => {
 }
 
 export default main;
+console.log(patterns);

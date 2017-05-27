@@ -21,6 +21,12 @@ export type Bank = {
   name: string
 };
 
+export type BankModule = {
+  bank: Bank,
+  patterns: Pattern[]
+  testCases: MessagePatternTransaction[],
+};
+
 export type MessagePatternTransaction = {
   message: Message,
   pattern_id: PatternId | null,
