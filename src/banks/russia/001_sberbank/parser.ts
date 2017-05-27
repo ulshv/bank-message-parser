@@ -1,6 +1,6 @@
 // Sberbank parser
 
-import { Message, Pattern, Transaction } from '../../../types';
+import { Message, Pattern, Transaction, Parser } from '../../../types';
 
 const parseMessage = (message: Message, pattern: Pattern): Transaction | void => {
   switch (pattern.id) {
@@ -35,4 +35,8 @@ const parser100 = (message: Message): Transaction => {
   return transaction;
 }
 
-export default parseMessage;
+const parser: Parser = {
+  parseMessage,
+};
+
+export default parser;

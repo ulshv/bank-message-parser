@@ -30,6 +30,10 @@ export type TestCase = {
   transaction: Transaction | null,
 };
 
-export interface Parser {
+export type Parser = {
+  parseMessage: ParserFunc,
+};
+
+export interface ParserFunc {
   (message: Message, pattern: Pattern): Transaction | void;
-}
+};

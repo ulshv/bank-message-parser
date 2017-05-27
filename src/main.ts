@@ -10,7 +10,7 @@ export const getPatternByMessage = (message: Message): Pattern | void =>
 
 export const getTransaction = (message: Message, pattern: Pattern): Transaction | void => {
   const bank = banksById[pattern.bank_id];
-  return bank.parser(message, pattern);
+  return bank.parser.parseMessage(message, pattern);
 }
 
 const main = (message: Message): Transaction | void => {
