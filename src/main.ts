@@ -16,4 +16,3 @@ const main = (message: Message): Transaction | void => {
 }
 
 export default main;
-console.log(patterns);

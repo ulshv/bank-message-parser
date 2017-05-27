@@ -1,8 +1,8 @@
 // Tinkoff test cases
 
-import { MessagePatternTransaction } from "../../../types";
+import { TestCase } from "../../../types";
 
-const testCases: MessagePatternTransaction[] = [
+const testCases: TestCase[] = [
   {
     message: "Pokupka. Karta *9486. Summa 447.00 RUB. LENTA, SYKTYVKAR. 13.05.2017 20:19. Dostupno 3500.99 RUB. Tinkoff.ru",
     pattern_id: 200,

@@ -24,10 +24,10 @@ export type Bank = {
 export type BankModule = {
   bank: Bank,
   patterns: Pattern[]
-  testCases: MessagePatternTransaction[],
+  testCases: TestCase[],
 };
 
-export type MessagePatternTransaction = {
+export type TestCase = {
   message: Message,
   pattern_id: PatternId | null,
   transaction: Transaction | null,

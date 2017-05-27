@@ -1,8 +1,8 @@
 // Raiffeisen test cases
 
-import { MessagePatternTransaction } from "../../../types";
+import { TestCase } from "../../../types";
 
-const testCases: MessagePatternTransaction[] = [
+const testCases: TestCase[] = [
   {
     message: "Karta *4503; Pokupka: RU/SYKTYVKAR/OKEY; 354.50 RUR; Data: 01/05/2017; Dostupny Ostatok: 5000 RUR. Raiffeisenbank",
     pattern_id: 300,

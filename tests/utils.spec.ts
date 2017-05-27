@@ -1,5 +1,4 @@
 import { expect } from "chai";
-import messagePatternPairs from './test-pairs/message-pattern';
 
 describe("utils", () => {
   /*
