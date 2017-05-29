@@ -46,7 +46,20 @@ const testCases: TestCase[] = [
     message: "VISA4567: перевод 300р. на карту получателя ИВАН ИВАНОВ И. выполнен",
     pattern_id: null,
     transaction: null
-  }
+  },
+  {
+    message: "VISA3423 12.05.17 00:00МСК зачисление 1000р Баланс: 1344.85р",
+    pattern_id: 100,
+    transaction: {
+      action: "зачисление",
+      balance: 1344.85,
+      card: "VISA3423",
+      datetime: "12.05.17 00:00",
+      type: "income",
+      value: 1000,
+      vendor: null,
+    }
+  },
 ];
 
 export default testCases;
