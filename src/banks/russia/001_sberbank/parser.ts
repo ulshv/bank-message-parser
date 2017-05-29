@@ -1,38 +1,41 @@
 // Sberbank parser
 
-import { Message, Pattern, Transaction, Parser } from '../../../types';
+import { Message, Pattern, Transaction, Parser, ParsersById } from '../../../types';
 
-const parseMessage = (message: Message, pattern: Pattern): Transaction | void => {
-  switch (pattern.id) {
-    case 100: return parser100(message)
-  }
-}
+const parser100 = (message: Message, pattern: Pattern): Transaction | void => {
+  const data = message.match(pattern.regexp);
+  if (!(data && data.length === 8)) return;
 
-const parser100 = (message: Message): Transaction => {
-  const valueRegexp = /(зачисление|покупка|списание|оплата услуг)\s(\d+|\d+\.\d+)р/
-  const incomeRegExp = /(зачисление)/
-  const outcomeRegExp = /(покупка|списание|оплата)/
-  const datetimeRegExp = /\d+\.\d+\.\d+\s\d+:\d+/
-  const isOutcome = outcomeRegExp.test(message);
-  const valuePart = message.match(valueRegexp);
-  const value = valuePart ? parseFloat(valuePart[0].replace(/[^0-9.]/g, "")) : 0;
-  const datetimePart = message.match(datetimeRegExp);
-  const datetime = datetimePart ? datetimePart[0] : ''
-  const vendorParts = message.match(new RegExp(valueRegexp.source + "(.*)" + 'Баланс'));
-  const vendor = vendorParts && vendorParts.length === 4 ? vendorParts[3].trim() : '';
-  const cardPart = message.match(/(VISA|MAESTRO)\d+/)
-  const card = cardPart ? cardPart[0] : ''
+  const action = data[3] || data[4];
+  const balance = parseFloat(data[7]);
+  const card = data[1];
+  const datetime = data[2];
+  const value = parseFloat(data[5]);
+  const vendor = data[6] || null;
+  const type = data[4] ? 'income' : 'outcome';
 
   const transaction: Transaction = {
-    balance: null,
+    action,
+    balance,
     card,
     datetime,
-    type: value < 0 ? 'outcome' : 'income',
+    type,
     value,
     vendor,
   }
 
   return transaction;
+}
+
+const parseMessage = (message: Message, pattern: Pattern): Transaction | void => {
+  const parser = parsersById[pattern.id];
+  if (!parser) return;
+
+  return parser(message, pattern);
+}
+
+const parsersById: ParsersById = {
+  100: parser100
 }
 
 const parser: Parser = {
