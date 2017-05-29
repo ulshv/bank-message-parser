@@ -18,5 +18,5 @@ export const patterns: Pattern[] = banks
   .reduce((arr, bank) => arr.concat(bank.patterns), [] as Pattern[]);
 export const patternsById = arrayToObjectWithIds(patterns);
 
-export const testCases: TestCase[] = banks
-  .reduce((arr, bank) => arr.concat(bank.testCases), [] as TestCase[]);
+export const testCases: TestCase[] = process.env.NODE_ENV === 'production'
+  ? [] : banks.reduce((arr, bank) => arr.concat(bank.testCases || []), [] as TestCase[]);

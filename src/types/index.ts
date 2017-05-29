@@ -21,7 +21,7 @@ export type Bank = {
   id: number,
   name: string,
   patterns: Pattern[]
-  testCases: TestCase[],
+  testCases: TestCase[] | null,
   parser: Parser,
 };
 
