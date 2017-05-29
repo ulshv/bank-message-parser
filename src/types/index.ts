@@ -4,10 +4,11 @@ export type PatternId = number;
 export type Pattern = {
   id: number,
   bank_id: number,
-  regexp: RegExp
+  regexp: RegExp,
 };
 
 export type Transaction = {
+  action: string | null,
   balance: number | null,
   card: string,
   datetime: string,
@@ -18,17 +19,26 @@ export type Transaction = {
 
 export type Bank = {
   id: number,
-  name: string
-};
-
-export type BankModule = {
-  bank: Bank,
+  name: string,
   patterns: Pattern[]
-  testCases: TestCase[],
+  testCases: TestCase[] | null,
+  parser: Parser,
 };
 
 export type TestCase = {
   message: Message,
   pattern_id: PatternId | null,
   transaction: Transaction | null,
+};
+
+export type Parser = {
+  parseMessage: ParserFunc,
+};
+
+export type ParsersById = {
+  [id: number]: ParserFunc;
+}
+
+export interface ParserFunc {
+  (message: Message, pattern: Pattern): Transaction | void;
 };
