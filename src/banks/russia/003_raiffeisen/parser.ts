@@ -13,7 +13,7 @@ const parser300 = (message: Message, pattern: Pattern): Transaction | void => {
     datetime : data[5],
     type     : 'outcome',
     value    : parseFloat(data[4]),
-    vendor   : data[3],
+    vendor   : data[3] || null,
   }
 
   return transaction;

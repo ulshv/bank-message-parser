@@ -6,22 +6,14 @@ const parser100 = (message: Message, pattern: Pattern): Transaction | void => {
   const data = message.match(pattern.regexp);
   if (!(data && data.length === 8)) return;
 
-  const action = data[3] || data[4];
-  const balance = parseFloat(data[7]);
-  const card = data[1];
-  const datetime = data[2];
-  const value = parseFloat(data[5]);
-  const vendor = data[6] || null;
-  const type = data[4] ? 'income' : 'outcome';
-
   const transaction: Transaction = {
-    action,
-    balance,
-    card,
-    datetime,
-    type,
-    value,
-    vendor,
+    action   : data[3] || data[4],
+    balance  : parseFloat(data[7]),
+    card     : data[1],
+    datetime : data[2],
+    type     : data[4] ? 'income' : 'outcome',
+    value    : parseFloat(data[5]),
+    vendor   : data[6] || null,
   }
 
   return transaction;
