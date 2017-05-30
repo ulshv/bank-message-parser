@@ -1,22 +1,16 @@
-import { Bank, Pattern, TestCase } from '../types';
-import { arrayToObjectWithIds } from '../utils';
+import { Bank, Banks, Pattern, TestCase } from '../types';
+import { objectToArray, arrayToObjectWithIds } from '../utils';
+import * as banksIds from './banks-ids.json';
 
-import b_001 from './russia/001_sberbank';
-import b_002 from './russia/002_tinkoff';
-import b_003 from './russia/003_raiffeisen';
-
-const banks: Bank[] = [
-  b_001,
-  b_002,
-  b_003,
-];
+const banks: Banks = {};
+banksIds.forEach(id => banks[id] = require(`./${id.replace(/\./, '/')}`).default);
 
 export default banks;
-export const banksById = arrayToObjectWithIds(banks);
+export const banksArray = objectToArray<Bank>(banks);
 
-export const patterns: Pattern[] = banks
+export const patterns: Pattern[] = banksArray
   .reduce((arr, bank) => arr.concat(bank.patterns), [] as Pattern[]);
 export const patternsById = arrayToObjectWithIds(patterns);
 
 export const testCases: TestCase[] = process.env.NODE_ENV === 'production'
-  ? [] : banks.reduce((arr, bank) => arr.concat(bank.testCases || []), [] as TestCase[]);
+  ? [] : banksArray.reduce((arr, bank) => arr.concat(bank.testCases || []), [] as TestCase[]);

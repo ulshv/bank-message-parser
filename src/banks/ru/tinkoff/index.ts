@@ -2,14 +2,12 @@
 
 import { Bank, TestCase } from '../../../types';
 import patterns from './patterns';
-import parser from './parser';
 const testCases = process.env.NODE_ENV === 'production' ? null : require('./test-cases.json');
 
 const bank: Bank = {
   id: 'ru.tinkoff',
-  testCases: testCases as TestCase[],
   patterns,
-  parser,
+  testCases,
 };
 
 export default bank;

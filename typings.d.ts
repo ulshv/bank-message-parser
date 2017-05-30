@@ -15,3 +15,9 @@ declare module "*test-cases.json" {
 
   export = value;
 }
+
+declare module "*banks-ids.json" {
+  const value: Array<string>
+
+  export = value;
+}

@@ -5,6 +5,7 @@ export type Pattern = {
   id: number,
   bank_id: string,
   regexp: RegExp,
+  parser: ParserFunc,
 };
 
 export type Transaction = {
@@ -19,9 +20,12 @@ export type Transaction = {
 
 export type Bank = {
   id: string,
-  patterns: Pattern[]
+  patterns: Pattern[],
   testCases: TestCase[] | null,
-  parser: Parser,
+};
+
+export type Banks = {
+  [id: string]: Bank,
 };
 
 export type TestCase = {
@@ -43,5 +47,5 @@ export interface ParseMessageFunc {
 }
 
 export interface ParserFunc {
-  (data: RegExpMatchArray): Transaction;
+  (data: RegExpMatchArray | null): Transaction;
 };

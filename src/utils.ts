@@ -8,6 +8,13 @@ export function arrayToObjectWithIds <T extends { id: number }> (arr: T[]): { [i
 }
 
 /**
+ * Convert array like `{ 5: { id: 5, ...etc }}` to object like `[ {id: 5, ...etc } ]`
+ */
+export function objectToArray <T extends {[id: string]: any}> (object: { [id: string]: T }): Array<T> {
+  return Object.keys(object).map((id: string) => object[id])
+}
+
+/**
  * Trim too long messages using '...' separator in the middle
  */
 export const trimText = (
