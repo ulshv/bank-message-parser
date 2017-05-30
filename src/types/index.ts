@@ -30,6 +30,7 @@ export type Banks = {
 
 export type TestCase = {
   message: Message,
+  bank_id: string | null,
   pattern_id: PatternId | null,
   transaction: Transaction | null,
 };

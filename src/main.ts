@@ -1,4 +1,4 @@
-import banks, { patterns } from './banks';
+import banks, { banksById, patterns } from './banks';
 import {
   Message,
   Transaction,
@@ -9,7 +9,7 @@ export const getPatternFromMessage = (message: Message): Pattern | void =>
   patterns.find(pattern => pattern.regexp.test(message));
 
 export const getTransaction = (message: Message, pattern: Pattern): Transaction | void => {
-  const bank = banks[pattern.bank_id];
+  const bank = banksById[pattern.bank_id];
   const data = message.match(pattern.regexp);
 
   if (!data) return;
