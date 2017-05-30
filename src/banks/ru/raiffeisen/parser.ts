@@ -1,16 +1,16 @@
-// Tinkoff parser
+// Raiffeisen parser
 
 import { Message, Pattern, Transaction, Parser, ParsersById } from '../../../types';
 
 const parsersById: ParsersById = {
-  200: (data: RegExpMatchArray): Transaction => ({
-    action   : data[1],
+  1: (data: RegExpMatchArray): Transaction => ({
+    action   : data[2],
     balance  : parseFloat(data[6]),
-    card     : data[2],
+    card     : data[1],
     datetime : data[5],
     type     : 'outcome',
-    value    : parseFloat(data[3]),
-    vendor   : data[4] || null,
+    value    : parseFloat(data[4]),
+    vendor   : data[3] || null,
   } as Transaction),
 }
 

@@ -3,7 +3,7 @@ export type PatternId = number;
 
 export type Pattern = {
   id: number,
-  bank_id: number,
+  bank_id: string,
   regexp: RegExp,
 };
 
@@ -18,8 +18,7 @@ export type Transaction = {
 };
 
 export type Bank = {
-  id: number,
-  name: string,
+  id: string,
   patterns: Pattern[]
   testCases: TestCase[] | null,
   parser: Parser,

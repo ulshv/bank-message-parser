@@ -4,8 +4,8 @@ import { Pattern } from '../../../types';
 
 const patterns: Pattern[] = [
   {
-    id: 100,
-    bank_id: 1,
+    id: 1,
+    bank_id: "ru.sberbank",
     regexp: /((?:VISA|MAESTRO)\d+).*?(\d+.\d+.\d+ \d+:\d+).*?(?:(оплата|покупка|списание)|(зачисление)).*?(\d+(?:\.\d+)?)р ?([\wа-яё]*) ?Баланс: (\d+(?:\.\d+)?)р/i
   },
 ];

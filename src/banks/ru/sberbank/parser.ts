@@ -3,7 +3,7 @@
 import { Message, Pattern, Transaction, Parser, ParsersById } from '../../../types';
 
 const parsersById: ParsersById = {
-  100: (data: RegExpMatchArray): Transaction => ({
+  1: (data: RegExpMatchArray): Transaction => ({
     action   : data[3] || data[4],
     balance  : parseFloat(data[7]),
     card     : data[1],
