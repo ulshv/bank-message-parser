@@ -32,13 +32,17 @@ export type TestCase = {
 };
 
 export type Parser = {
-  parseMessage: ParserFunc,
+  parseMessage: ParseMessageFunc,
 };
 
 export type ParsersById = {
   [id: number]: ParserFunc;
 }
 
-export interface ParserFunc {
+export interface ParseMessageFunc {
   (message: Message, pattern: Pattern): Transaction | void;
+}
+
+export interface ParserFunc {
+  (data: RegExpMatchArray): Transaction;
 };

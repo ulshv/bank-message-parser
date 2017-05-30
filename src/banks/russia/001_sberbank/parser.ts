@@ -2,11 +2,8 @@
 
 import { Message, Pattern, Transaction, Parser, ParsersById } from '../../../types';
 
-const parser100 = (message: Message, pattern: Pattern): Transaction | void => {
-  const data = message.match(pattern.regexp);
-  if (!(data && data.length === 8)) return;
-
-  const transaction: Transaction = {
+const parsersById: ParsersById = {
+  100: (data: RegExpMatchArray): Transaction => ({
     action   : data[3] || data[4],
     balance  : parseFloat(data[7]),
     card     : data[1],
@@ -14,24 +11,14 @@ const parser100 = (message: Message, pattern: Pattern): Transaction | void => {
     type     : data[4] ? 'income' : 'outcome',
     value    : parseFloat(data[5]),
     vendor   : data[6] || null,
-  }
-
-  return transaction;
+  } as Transaction),
 }
 
 const parseMessage = (message: Message, pattern: Pattern): Transaction | void => {
+  const data = message.match(pattern.regexp);
   const parser = parsersById[pattern.id];
-  if (!parser) return;
 
-  return parser(message, pattern);
+  if (data && parser) return parser(data);
 }
 
-const parsersById: ParsersById = {
-  100: parser100
-}
-
-const parser: Parser = {
-  parseMessage,
-};
-
-export default parser;
+export default { parseMessage } as Parser;
