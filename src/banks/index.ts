@@ -1,6 +1,6 @@
 import { Bank, Banks, Pattern, TestCase } from '../types';
 import { arrayToObjectWithStringIds } from '../utils';
-import * as banksIds from './banks-ids.json';
+import * as banksIds from './banks.json';
 
 const banks: Bank[] = banksIds.map(id => require(`./${id.replace(/\./, '/')}`).default);
 export default banks;
