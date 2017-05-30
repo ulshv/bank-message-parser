@@ -4,8 +4,8 @@
   "description": "",
   "main": "src/main.ts",
   "scripts": {
-    "build": "webpack",
-    "build:dist": "NODE_ENV=production webpack -p",
+    "build": "NODE_ENV=production webpack -p",
+    "build:dev": "webpack",
     "start": "npm run build && node ./dist/bundle.js",
     "test": "mocha ./tests/**/*.spec.ts --require ts-node/register"
   },

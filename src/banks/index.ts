@@ -1,22 +1,16 @@
-import { Bank, Pattern, TestCase } from '../types';
-import { arrayToObjectWithIds } from '../utils';
+import { Bank, Banks, Pattern, TestCase } from '../types';
+import { arrayToObjectWithStringIds } from '../utils';
+import * as banksIds from './banks.json';
 
-import b_001 from './russia/001_sberbank';
-import b_002 from './russia/002_tinkoff';
-import b_003 from './russia/003_raiffeisen';
-
-const banks: Bank[] = [
-  b_001,
-  b_002,
-  b_003,
-];
+const banks: Bank[] = banksIds.map(id =>
+  // dynamic require only for `banks/**/index.ts` (ignore */test-cases.json, etc.)
+  require(`./${id.replace(/\./, '/')}/index.ts`).default);
 
 export default banks;
-export const banksById = arrayToObjectWithIds(banks);
+export const banksById = arrayToObjectWithStringIds<Bank>(banks);
 
 export const patterns: Pattern[] = banks
   .reduce((arr, bank) => arr.concat(bank.patterns), [] as Pattern[]);
-export const patternsById = arrayToObjectWithIds(patterns);
 
 export const testCases: TestCase[] = process.env.NODE_ENV === 'production'
   ? [] : banks.reduce((arr, bank) => arr.concat(bank.testCases || []), [] as TestCase[]);

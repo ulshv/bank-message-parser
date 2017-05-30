@@ -3,8 +3,9 @@ export type PatternId = number;
 
 export type Pattern = {
   id: number,
-  bank_id: number,
+  bank_id: string,
   regexp: RegExp,
+  parser: ParserFunc,
 };
 
 export type Transaction = {
@@ -18,15 +19,18 @@ export type Transaction = {
 };
 
 export type Bank = {
-  id: number,
-  name: string,
-  patterns: Pattern[]
+  id: string,
+  patterns: Pattern[],
   testCases: TestCase[] | null,
-  parser: Parser,
+};
+
+export type Banks = {
+  [id: string]: Bank,
 };
 
 export type TestCase = {
   message: Message,
+  bank_id: string | null,
   pattern_id: PatternId | null,
   transaction: Transaction | null,
 };
@@ -44,5 +48,5 @@ export interface ParseMessageFunc {
 }
 
 export interface ParserFunc {
-  (data: RegExpMatchArray): Transaction;
+  (data: RegExpMatchArray | null): Transaction;
 };
