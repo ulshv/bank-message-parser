@@ -1,15 +1,15 @@
 // Raiffeisen
 
-import { Bank } from '../../../types';
+import { Bank, TestCase } from '../../../types';
 import patterns from './patterns';
 import parser from './parser';
-const { default: testCases } = process.env.NODE_ENV === 'production' ? null : require('./test-cases');
+const testCases = process.env.NODE_ENV === 'production' ? null : require('./test-cases.json');
 
 const bank: Bank = {
   id: 3,
   name: 'Raiffeisen',
+  testCases: testCases as TestCase[],
   patterns,
-  testCases,
   parser,
 };
 
