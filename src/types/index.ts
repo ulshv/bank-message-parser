@@ -1,11 +1,10 @@
 export type Message = string;
-export type PatternId = number;
 
 export type Pattern = {
   id: number,
   bank_id: string,
   regexp: RegExp,
-  parser: ParserFunc,
+  parser: Parser,
 };
 
 export type Transaction = {
@@ -24,29 +23,13 @@ export type Bank = {
   testCases: TestCase[] | null,
 };
 
-export type Banks = {
-  [id: string]: Bank,
-};
-
 export type TestCase = {
   message: Message,
   bank_id: string | null,
-  pattern_id: PatternId | null,
+  pattern_id: number | null,
   transaction: Transaction | null,
 };
 
-export type Parser = {
-  parseMessage: ParseMessageFunc,
-};
-
-export type ParsersById = {
-  [id: number]: ParserFunc;
-}
-
-export interface ParseMessageFunc {
-  (message: Message, pattern: Pattern): Transaction | void;
-}
-
-export interface ParserFunc {
+export interface Parser {
   (data: RegExpMatchArray | null): Transaction;
 };
