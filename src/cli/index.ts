@@ -1,34 +1,22 @@
 import * as inquirer from 'inquirer';
-import q from './questions';
-const prompt = inquirer.createPromptModule();
+import checkMessages from './check-messages';
 
-const selectAction = () => {
-  prompt(q.action).then(({ action }) => {
-    if (action === 'add-test') {
-      addTestCase();
-    } else {
-      addBank();
-    }
+const selectAction = (): void => {
+  inquirer.prompt({
+    type: 'list',
+    name: 'action',
+    message: 'Select action:',
+    choices: [
+      { name: 'Check unsupported messages', value: 'checkMessages'},
+      { name: 'Add TestCase for Bank', value: 'addTestCase'},
+      { name: 'Add new Bank', value: 'addBank'},
+    ],
   })
+  .then(({ action }) => actionHandlers[action]());
 }
 
-const addTestCase = () => {
-  prompt([
-    q.country,
-    q.bank,
-    q.message,
-  ]).then(answers => console.log(answers))
-}
-
-const addBank = () => {
-  prompt([
-    q.country,
-    q.bankNewName,
-  ]).then(answers => console.log(answers))
-}
-
-const main = () => {
-  selectAction();
+const actionHandlers: { [name: string]: Function } = {
+  checkMessages,
 };
 
-main();
+selectAction();
