@@ -21,6 +21,7 @@ export type Bank = {
   id: string,
   patterns: Pattern[],
   testCases: TestCase[] | null,
+  unsupported: string[] | null,
 };
 
 export type TestCase = {

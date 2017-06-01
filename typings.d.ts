@@ -18,6 +18,10 @@ declare module "*test-cases.json" {
 
 declare module "*banks.json" {
   const value: Array<string>
+  export = value;
+}
 
+declare module "*unsupported.json" {
+  const value: string[];
   export = value;
 }
