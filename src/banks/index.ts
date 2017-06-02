@@ -1,4 +1,4 @@
-import { Bank, Banks, Pattern, TestCase } from '../types';
+import { Bank, Pattern, TestCase } from '../types';
 import { arrayToObjectWithStringIds } from '../utils';
 import * as banksIds from './banks.json';
 
