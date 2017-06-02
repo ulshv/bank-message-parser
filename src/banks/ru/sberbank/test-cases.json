@@ -54,5 +54,47 @@
       "value": 1000,
       "vendor": null
     }
+  },
+  {
+    "message": "10МАЙ 10МАЙ17 123456 SBOL RUR 1000.00 1000.00CR",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 2,
+    "transaction": {
+      "action": null,
+      "balance": null,
+      "card": null,
+      "datetime": "10МАЙ17",
+      "type": "income",
+      "value": 1000,
+      "vendor": "SBOL"
+    }
+  },
+  {
+    "message": "11МАЙ 12МАЙ17 123457 ELDORADO RUR 990.90 990.90",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 2,
+    "transaction": {
+      "action": null,
+      "balance": null,
+      "card": null,
+      "datetime": "11МАЙ17",
+      "type": "outcome",
+      "value": 990.9,
+      "vendor": "ELDORADO"
+    }
+  },
+  {
+    "message": "31ДЕК16 01ЯНВ17 123456 ATM 12345 RUR 1000.00 1000.00",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 2,
+    "transaction": {
+      "action": null,
+      "balance": null,
+      "card": null,
+      "datetime": "31ДЕК16",
+      "type": "outcome",
+      "value": 1000,
+      "vendor": "ATM 12345"
+    }
   }
 ]
