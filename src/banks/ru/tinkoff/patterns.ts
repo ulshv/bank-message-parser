@@ -17,6 +17,20 @@ const patterns: Pattern[] = [
       vendor   : data[4] || null,
     } as Transaction),
   },
+  {
+    id: 2,
+    bank_id: "ru.tinkoff",
+    regexp: /(\d{2}\.\d{2}\.\d{2}(?: \d{2}:\d{2})?) \d{2}\.\d{2}\.\d{2} (\+)?(\d[\s\d]*(?:\.\d{2})?) (\w+)(?: \+?(?:\d[\s\d]*(?:\.\d{2})?) \4)? (?:(Оплата|Пополнение)\s?(?:[\.\wа-яё]+)? (.*)|(Проценты.*|Вознаграждение.*|Плата.*?sms.*))/i,
+    parser: (data: RegExpMatchArray): Transaction => ({
+      action   : data[5] || data[7],
+      balance  : null,
+      card     : null,
+      datetime : data[1],
+      type     : data[2] ? 'income' : 'outcome',
+      value    : parseFloat(data[3].replace(/\s/g, '')),
+      vendor   : data[6] || null,
+    } as Transaction),
+  }
 ];
 
 export default patterns;
