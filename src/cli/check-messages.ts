@@ -25,13 +25,7 @@ const checkMessages = (defaultBankId? : string): void => {
       });
 
       if (supported.length) {
-        inquirer.prompt({
-          type: 'confirm',
-          default: false,
-          name: 'deleteSupported',
-          message: 'Supported messages found. Are their Transactions correct?\n  ' +
-                   'Delete them from unsupported.json?',
-        }).then(({ deleteSupported }) => {
+        inquirer.prompt(confirmDeleteQuestion).then(({ deleteSupported }) => {
           if (deleteSupported) {
             const filename = './src/banks/' +
               bank.id.replace(/\./, '/') + '/unsupported.json';
@@ -46,5 +40,13 @@ const checkMessages = (defaultBankId? : string): void => {
       }
     });
 }
+
+const confirmDeleteQuestion: inquirer.Question = {
+  type: 'confirm',
+  default: false,
+  name: 'deleteSupported',
+  message: 'Supported messages found. Are their Transactions correct?\n  ' +
+            'Delete them from unsupported.json?',
+};
 
 export default checkMessages;

@@ -10,7 +10,7 @@ export type Pattern = {
 export type Transaction = {
   action: string | null,
   balance: number | null,
-  card: string,
+  card: string | null,
   datetime: string,
   type: string,
   value: number,
