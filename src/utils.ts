@@ -20,3 +20,6 @@ export const trimText = (
   const half = Math.round((limit - separator.length) / 2)
   return text.substr(0, half) + separator + text.substr(text.length - half, text.length);
 }
+
+/** Returns string with capitalized first character */
+export const capitalize = (str?: string) => str && str.charAt(0).toUpperCase() + str.slice(1)

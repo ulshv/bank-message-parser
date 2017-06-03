@@ -7,7 +7,7 @@
       "balance": 1000.5,
       "card": "VISA1234",
       "datetime": "15.05.17 12:45",
-      "description": "оплата",
+      "description": "Оплата услуг",
       "flow": "-",
       "value": 100,
       "vendor": "TELE2"
@@ -21,7 +21,7 @@
       "balance": 9500,
       "card": "VISA2345",
       "datetime": "23.04.17 19:50",
-      "description": "покупка",
+      "description": "Покупка",
       "flow": "-",
       "value": 19990,
       "vendor": "ELDORADO"
@@ -35,7 +35,7 @@
       "balance": 21592.69,
       "card": "VISA3456",
       "datetime": "05.02.17 16:55",
-      "description": "списание",
+      "description": "Списание",
       "flow": "-",
       "value": 2900,
       "vendor": null
@@ -49,7 +49,7 @@
       "balance": 1344.85,
       "card": "VISA3423",
       "datetime": "12.05.17 00:00",
-      "description": "зачисление",
+      "description": "Зачисление",
       "flow": "+",
       "value": 1000,
       "vendor": null
@@ -95,6 +95,34 @@
       "flow": "-",
       "value": 1000,
       "vendor": "ATM 12345"
+    }
+  },
+  {
+    "message": "06МАЙ 08МАЙ17 000000 ПЛАТА ЗА УСЛУГУ МОБИЛЬ RUR 60.00 60.00",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 2,
+    "transaction": {
+      "balance": null,
+      "card": null,
+      "datetime": "06МАЙ17",
+      "description": "ПЛАТА ЗА УСЛУГУ МОБИЛЬ",
+      "flow": "-",
+      "value": 60,
+      "vendor": null
+    }
+  },
+  {
+    "message": "04МАЙ 04МАЙ17 124453 SBERBANK ONL@IN PLATEZ RUR 505.00 505.00",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 2,
+    "transaction": {
+      "balance": null,
+      "card": null,
+      "datetime": "04МАЙ17",
+      "description": "SBERBANK ONL@IN PLATEZ",
+      "flow": "-",
+      "value": 505.00,
+      "vendor": null
     }
   }
 ]

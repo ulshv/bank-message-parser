@@ -1,20 +1,21 @@
 // Sberbank patterns
 
 import { Pattern, Transaction } from '../../../types';
+import { capitalize } from '../../../utils';
 
 const patterns: Pattern[] = [
   {
     id: 1,
     bank_id: "ru.sberbank",
-    regexp: /((?:VISA|MAESTRO)\d+).*?(\d+.\d+.\d+ \d+:\d+).*?(?:(оплата|покупка|списание)|(зачисление)).*?(\d+(?:\.\d+)?)р ?([\wа-яё]*) ?Баланс: (\d+(?:\.\d+)?)р/i,
+    regexp: /((?:VISA|MAESTRO)\d+) (\d{2}\.\d{2}\.\d{2} \d{2}:\d{2})\S* (?:(оплата услуг|покупка|списание)|(зачисление)) (\d+(?:\.\d+)?)(р)\s?([\wа-яё]*) Баланс: (\d+(?:\.\d+)?)р/i,
     parser: (data: RegExpMatchArray): Transaction => ({
-      balance     : parseFloat(data[7]),
+      balance     : parseFloat(data[8]),
       card        : data[1],
       datetime    : data[2],
-      description : data[3] || data[4],
+      description : capitalize(data[3] || data[4]),
       flow        : data[4] ? '+' : '-',
       value       : parseFloat(data[5]),
-      vendor      : data[6] || null,
+      vendor      : data[7] || null,
     } as Transaction),
   },
   {
