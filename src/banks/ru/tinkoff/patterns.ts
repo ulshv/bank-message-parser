@@ -6,12 +6,12 @@ const patterns: Pattern[] = [
   {
     id: 1,
     bank_id: "ru.tinkoff",
-    regexp: /(?:(Pokupka))\. Karta (\*\d+)\. Summa (\d+(?:\.\d+)?) RUB\. ([\w\d\s.,а-яё]*?)\. (\d+\.\d+\.\d+ \d+:\d+)\. Dostupno (\d+(?:\.\d+)?) RUB\. Tinkoff\.ru/i,
+    regexp: /(Pokupka)\. Karta (\*\d+)\. Summa (\d+(?:\.\d+)?) RUB\. ([\w\d\s.,а-яё]*?)\. (\d+\.\d+\.\d+ \d+:\d+)\. Dostupno (\d+(?:\.\d+)?) RUB\. Tinkoff\.ru/i,
     parser: (data: RegExpMatchArray): Transaction => ({
       balance     : parseFloat(data[6]),
       card        : data[2],
       datetime    : data[5],
-      description : data[1],
+      description : 'Покупка',
       flow        : '-',
       value       : parseFloat(data[3]),
       vendor      : data[4] || null,

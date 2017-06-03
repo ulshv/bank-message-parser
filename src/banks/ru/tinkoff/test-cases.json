@@ -7,7 +7,7 @@
       "balance": 3500.99,
       "card": "*1234",
       "datetime": "13.05.2017 20:19",
-      "description": "Pokupka",
+      "description": "Покупка",
       "flow": "-",
       "value": 447,
       "vendor": "LENTA, SYKTYVKAR"
@@ -21,7 +21,7 @@
       "balance": 2904,
       "card": "*9876",
       "datetime": "12.05.2017 21:30",
-      "description": "Pokupka",
+      "description": "Покупка",
       "flow": "-",
       "value": 318,
       "vendor": "PYATEROCHKA 7078, SYKTYVKAR"
