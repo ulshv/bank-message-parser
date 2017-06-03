@@ -110,5 +110,33 @@
       "value": 39,
       "vendor": null
     }
+  },
+  {
+    "message": "Vypiska ot 29.04 po karte *4321. Nachisleno protsentov: 123.45 rub. Cashback: 123.45 rub. Balans na 29.04: 12345.67 rub. Tinkoff.ru",
+    "bank_id": "ru.tinkoff",
+    "pattern_id": 3,
+    "transaction": {
+      "description": "Выписка от 29.04. Проценты на остаток по счету и вознаграждение за операции покупок",
+      "balance": 12345.67,
+      "card": "*4321",
+      "datetime": "29.04",
+      "flow": "+",
+      "value": 246.9,
+      "vendor": "Tinkoff"
+    }
+  },
+  {
+    "message": "Vypiska ot 29.03 po karte *1234. Nachisleno protsentov: 123 rub. Cashback: 123 rub. Balans na 29.03: 12345 rub. Tinkoff.ru",
+    "bank_id": "ru.tinkoff",
+    "pattern_id": 3,
+    "transaction": {
+      "description": "Выписка от 29.03. Проценты на остаток по счету и вознаграждение за операции покупок",
+      "balance": 12345,
+      "card": "*1234",
+      "datetime": "29.03",
+      "flow": "+",
+      "value": 246,
+      "vendor": "Tinkoff"
+    }
   }
 ]

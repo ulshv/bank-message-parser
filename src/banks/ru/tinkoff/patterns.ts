@@ -30,7 +30,21 @@ const patterns: Pattern[] = [
       value       : parseFloat(data[3].replace(/\s/g, '')),
       vendor      : data[6] || null,
     } as Transaction),
-  }
+  },
+  {
+    id: 3,
+    bank_id: "ru.tinkoff",
+    regexp: /Vypiska ot (\d{2}\.\d{2}) po karte (\*\d+)\. Nachisleno protsentov: (\d+(?:\.\d+)?) (rub)\. Cashback: (\d+(?:\.\d+)?) (rub)\. Balans na (\d{2}\.\d{2}): (\d+(?:\.\d+)?) (rub)\. Tinkoff\.ru/i,
+    parser: (data: RegExpMatchArray): Transaction => ({
+      balance     : parseFloat(data[8]),
+      card        : data[2],
+      datetime    : data[1],
+      description : `Выписка от ${data[1]}. Проценты на остаток по счету и вознаграждение за операции покупок`,
+      flow        : '+',
+      value       : parseFloat((parseFloat(data[3]) + parseFloat(data[5])).toFixed(3)),
+      vendor      : 'Tinkoff',
+    } as Transaction),
+  },
 ];
 
 export default patterns;
