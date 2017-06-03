@@ -16,7 +16,7 @@ declare module "*test-cases.json" {
   export = value;
 }
 
-declare module "*banks.json" {
+declare module "*bank-paths.json" {
   const value: Array<string>
   export = value;
 }

@@ -1,5 +1,3 @@
-// Sberbank patterns
-
 import { Pattern, Transaction } from '../../../types';
 import { capitalize } from '../../../utils';
 

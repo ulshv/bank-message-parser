@@ -1,5 +1,3 @@
-// Raiffeisen patterns
-
 import { Pattern, Transaction } from '../../../types';
 
 const patterns: Pattern[] = [
