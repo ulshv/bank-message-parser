@@ -11,7 +11,7 @@ const patterns: Pattern[] = [
       balance     : parseFloat(data[6]),
       card        : data[1],
       datetime    : data[5],
-      description : data[3] ? `Покупка в ${data[3]}` : null,
+      description : 'Покупка',
       flow        : '-',
       value       : parseFloat(data[4]),
       vendor      : data[3] || null,

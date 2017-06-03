@@ -7,7 +7,7 @@
       "balance": 5000,
       "card": "*4503",
       "datetime": "01/05/2017",
-      "description": "Покупка в RU/SYKTYVKAR/OKEY",
+      "description": "Покупка",
       "flow": "-",
       "value": 354.5,
       "vendor": "RU/SYKTYVKAR/OKEY"
@@ -21,7 +21,7 @@
       "balance": 5000.96,
       "card": "*6597",
       "datetime": "01/05/2017",
-      "description": "Покупка в RU/SYKTYVKAR/LENTA",
+      "description": "Покупка",
       "flow": "-",
       "value": 543,
       "vendor": "RU/SYKTYVKAR/LENTA"
@@ -35,7 +35,7 @@
       "balance": 4234.46,
       "card": "*4683",
       "datetime": "04/05/2017",
-      "description": "Покупка в RU/MOSCOW/RAMBLER/KASSA",
+      "description": "Покупка",
       "flow": "-",
       "value": 540,
       "vendor": "RU/MOSCOW/RAMBLER/KASSA"
