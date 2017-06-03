@@ -8,11 +8,11 @@ export type Pattern = {
 };
 
 export type Transaction = {
-  action: string | null,
   balance: number | null,
   card: string | null,
   datetime: string,
-  type: string,
+  description: string | null,
+  flow: '+' | '-', // income or expenses
   value: number,
   vendor: string | null,
 };

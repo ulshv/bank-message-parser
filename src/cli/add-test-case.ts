@@ -22,11 +22,11 @@ const addTestCase = (defaultBankId?: string): void => {
             bank_id: bankId,
             pattern_id: null,
             transaction: {
-              action: a.action || null,
               balance: a.balance ? parseFloat(a.balance) : null,
               card: a.card || null,
               datetime: a.datetime,
-              type: a.type,
+              description: a.action || null,
+              flow: a.type,
               value: parseFloat(a.value),
               vendor: a.vendor || null,
             }
@@ -83,10 +83,10 @@ const testCaseQuestions: inquirer.Questions = [
   },
   {
     type: 'input',
-    name: 'type',
-    message: '* type:',
-    validate: input => /^(income|outcome)$/.test(input) ||
-      `Should be 'income' or 'outcome'`
+    name: 'flow',
+    message: '* flow:',
+    validate: input => /^(\+|\-)$/.test(input) ||
+      `Should be '+' or '-'`
   },
   {
     type: 'input',
@@ -95,8 +95,8 @@ const testCaseQuestions: inquirer.Questions = [
   },
   {
     type: 'input',
-    name: 'action',
-    message: '  action:'
+    name: 'description',
+    message: '  description:'
   },
   {
     type: 'input',

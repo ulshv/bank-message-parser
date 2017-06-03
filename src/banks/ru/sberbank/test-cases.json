@@ -4,11 +4,11 @@
     "bank_id": "ru.sberbank",
     "pattern_id": 1,
     "transaction": {
-      "action": "оплата",
       "balance": 1000.5,
       "card": "VISA1234",
       "datetime": "15.05.17 12:45",
-      "type": "outcome",
+      "description": "оплата",
+      "flow": "-",
       "value": 100,
       "vendor": "TELE2"
     }
@@ -18,11 +18,11 @@
     "bank_id": "ru.sberbank",
     "pattern_id": 1,
     "transaction": {
-      "action": "покупка",
       "balance": 9500,
       "card": "VISA2345",
       "datetime": "23.04.17 19:50",
-      "type": "outcome",
+      "description": "покупка",
+      "flow": "-",
       "value": 19990,
       "vendor": "ELDORADO"
     }
@@ -32,11 +32,11 @@
     "bank_id": "ru.sberbank",
     "pattern_id": 1,
     "transaction": {
-      "action": "списание",
       "balance": 21592.69,
       "card": "VISA3456",
       "datetime": "05.02.17 16:55",
-      "type": "outcome",
+      "description": "списание",
+      "flow": "-",
       "value": 2900,
       "vendor": null
     }
@@ -46,11 +46,11 @@
     "bank_id": "ru.sberbank",
     "pattern_id": 1,
     "transaction": {
-      "action": "зачисление",
       "balance": 1344.85,
       "card": "VISA3423",
       "datetime": "12.05.17 00:00",
-      "type": "income",
+      "description": "зачисление",
+      "flow": "+",
       "value": 1000,
       "vendor": null
     }
@@ -60,11 +60,11 @@
     "bank_id": "ru.sberbank",
     "pattern_id": 2,
     "transaction": {
-      "action": null,
       "balance": null,
       "card": null,
       "datetime": "10МАЙ17",
-      "type": "income",
+      "description": null,
+      "flow": "+",
       "value": 1000,
       "vendor": "SBOL"
     }
@@ -74,11 +74,11 @@
     "bank_id": "ru.sberbank",
     "pattern_id": 2,
     "transaction": {
-      "action": null,
       "balance": null,
       "card": null,
       "datetime": "11МАЙ17",
-      "type": "outcome",
+      "description": null,
+      "flow": "-",
       "value": 990.9,
       "vendor": "ELDORADO"
     }
@@ -88,11 +88,11 @@
     "bank_id": "ru.sberbank",
     "pattern_id": 2,
     "transaction": {
-      "action": null,
       "balance": null,
       "card": null,
       "datetime": "31ДЕК16",
-      "type": "outcome",
+      "description": null,
+      "flow": "-",
       "value": 1000,
       "vendor": "ATM 12345"
     }

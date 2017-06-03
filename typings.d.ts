@@ -3,11 +3,11 @@ declare module "*test-cases.json" {
       message: string,
       pattern_id: number | null,
       transaction: {
-        action: string | null,
         balance: number | null,
         card: string,
         datetime: string,
-        type: string,
+        description: string | null,
+        flow: '+' | '-',
         value: number,
         subject: string | null
       } | null

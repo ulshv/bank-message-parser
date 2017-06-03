@@ -4,11 +4,11 @@
     "bank_id": "ru.raiffeisen",
     "pattern_id": 1,
     "transaction": {
-      "action": "Pokupka",
       "balance": 5000,
       "card": "*4503",
       "datetime": "01/05/2017",
-      "type": "outcome",
+      "description": "Pokupka",
+      "flow": "-",
       "value": 354.5,
       "vendor": "RU/SYKTYVKAR/OKEY"
     }
@@ -18,11 +18,11 @@
     "bank_id": "ru.raiffeisen",
     "pattern_id": 1,
     "transaction": {
-      "action": "Pokupka",
       "balance": 5000.96,
       "card": "*6597",
       "datetime": "01/05/2017",
-      "type": "outcome",
+      "description": "Pokupka",
+      "flow": "-",
       "value": 543,
       "vendor": "RU/SYKTYVKAR/LENTA"
     }
@@ -32,11 +32,11 @@
     "bank_id": "ru.raiffeisen",
     "pattern_id": 1,
     "transaction": {
-      "action": "Pokupka",
       "balance": 4234.46,
       "card": "*4683",
       "datetime": "04/05/2017",
-      "type": "outcome",
+      "description": "Pokupka",
+      "flow": "-",
       "value": 540,
       "vendor": "RU/MOSCOW/RAMBLER/KASSA"
     }
