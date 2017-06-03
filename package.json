@@ -6,7 +6,6 @@
   "scripts": {
     "build": "NODE_ENV=production webpack -p",
     "build:dev": "webpack",
-    "cli": "ts-node ./src/cli/index.ts",
     "start": "npm run build && node ./dist/bundle.js",
     "test": "mocha ./tests/**/*.spec.ts --require ts-node/register"
   },
@@ -20,11 +19,9 @@
   },
   "devDependencies": {
     "@types/chai": "^3.5.2",
-    "@types/inquirer": "0.0.34",
     "@types/mocha": "^2.2.41",
     "@types/node": "^7.0.22",
     "chai": "^3.5.0",
-    "inquirer": "^3.0.6",
     "mocha": "^3.4.2",
     "ts-loader": "^2.1.0",
     "ts-node": "^3.0.4",
