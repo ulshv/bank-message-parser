@@ -23,6 +23,11 @@ module.exports = {
   plugins: [
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
+    }),
+    new webpack.BannerPlugin({
+      banner: require('fs')
+        .readFileSync('./LICENSE', 'utf-8')
+        .split('\n').slice(177, 190).join('\n')
     })
   ]
 };
