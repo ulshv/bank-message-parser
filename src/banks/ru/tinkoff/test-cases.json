@@ -74,10 +74,10 @@
     "bank_id": "ru.tinkoff",
     "pattern_id": 2,
     "transaction": {
-      "description": "Проценты на остаток по счету",
       "balance": null,
       "card": null,
       "datetime": "29.04.17",
+      "description": "Проценты на остаток по счету",
       "flow": "+",
       "value": 100.12,
       "vendor": null
@@ -88,10 +88,10 @@
     "bank_id": "ru.tinkoff",
     "pattern_id": 2,
     "transaction": {
-      "description": "Вознаграждение за операции покупок",
       "balance": null,
       "card": null,
       "datetime": "29.04.17",
+      "description": "Вознаграждение за операции покупок",
       "flow": "+",
       "value": 100,
       "vendor": null
@@ -102,10 +102,10 @@
     "bank_id": "ru.tinkoff",
     "pattern_id": 2,
     "transaction": {
-      "description": "Плата за предоставление услуги SMS-банк",
       "balance": null,
       "card": null,
       "datetime": "29.04.17",
+      "description": "Плата за предоставление услуги SMS-банк",
       "flow": "-",
       "value": 39,
       "vendor": null
@@ -116,10 +116,10 @@
     "bank_id": "ru.tinkoff",
     "pattern_id": 3,
     "transaction": {
-      "description": "Выписка от 29.04. Проценты на остаток по счету и вознаграждение за операции покупок",
       "balance": 12345.67,
       "card": "*4321",
       "datetime": "29.04",
+      "description": "Выписка от 29.04. Проценты на остаток по счету и вознаграждение за операции покупок",
       "flow": "+",
       "value": 246.9,
       "vendor": "Tinkoff"
@@ -130,10 +130,10 @@
     "bank_id": "ru.tinkoff",
     "pattern_id": 3,
     "transaction": {
-      "description": "Выписка от 29.03. Проценты на остаток по счету и вознаграждение за операции покупок",
       "balance": 12345,
       "card": "*1234",
       "datetime": "29.03",
+      "description": "Выписка от 29.03. Проценты на остаток по счету и вознаграждение за операции покупок",
       "flow": "+",
       "value": 246,
       "vendor": "Tinkoff"
