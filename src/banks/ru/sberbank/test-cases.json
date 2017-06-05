@@ -1,0 +1,128 @@
+[
+  {
+    "message": "VISA1234 15.05.17 12:45 оплата услуг 100р TELE2 Баланс: 1000.50р",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 1,
+    "transaction": {
+      "balance": 1000.5,
+      "card": "VISA1234",
+      "datetime": "15.05.17 12:45",
+      "description": "Оплата услуг",
+      "flow": "-",
+      "value": 100,
+      "vendor": "TELE2"
+    }
+  },
+  {
+    "message": "VISA2345 23.04.17 19:50 покупка 19990р ELDORADO Баланс: 9500р",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 1,
+    "transaction": {
+      "balance": 9500,
+      "card": "VISA2345",
+      "datetime": "23.04.17 19:50",
+      "description": "Покупка",
+      "flow": "-",
+      "value": 19990,
+      "vendor": "ELDORADO"
+    }
+  },
+  {
+    "message": "VISA3456 05.02.17 16:55 списание 2900р Баланс: 21592.69р",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 1,
+    "transaction": {
+      "balance": 21592.69,
+      "card": "VISA3456",
+      "datetime": "05.02.17 16:55",
+      "description": "Списание",
+      "flow": "-",
+      "value": 2900,
+      "vendor": null
+    }
+  },
+  {
+    "message": "VISA3423 12.05.17 00:00МСК зачисление 1000р Баланс: 1344.85р",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 1,
+    "transaction": {
+      "balance": 1344.85,
+      "card": "VISA3423",
+      "datetime": "12.05.17 00:00",
+      "description": "Зачисление",
+      "flow": "+",
+      "value": 1000,
+      "vendor": null
+    }
+  },
+  {
+    "message": "10МАЙ 10МАЙ17 123456 SBOL RUR 1000.00 1000.00CR",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 2,
+    "transaction": {
+      "balance": null,
+      "card": null,
+      "datetime": "10МАЙ17",
+      "description": null,
+      "flow": "+",
+      "value": 1000,
+      "vendor": "SBOL"
+    }
+  },
+  {
+    "message": "11МАЙ 12МАЙ17 123457 ELDORADO RUR 990.90 990.90",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 2,
+    "transaction": {
+      "balance": null,
+      "card": null,
+      "datetime": "11МАЙ17",
+      "description": null,
+      "flow": "-",
+      "value": 990.9,
+      "vendor": "ELDORADO"
+    }
+  },
+  {
+    "message": "31ДЕК16 01ЯНВ17 123456 ATM 12345 RUR 1000.00 1000.00",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 2,
+    "transaction": {
+      "balance": null,
+      "card": null,
+      "datetime": "31ДЕК16",
+      "description": null,
+      "flow": "-",
+      "value": 1000,
+      "vendor": "ATM 12345"
+    }
+  },
+  {
+    "message": "06МАЙ 08МАЙ17 000000 ПЛАТА ЗА УСЛУГУ МОБИЛЬ RUR 60.00 60.00",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 2,
+    "transaction": {
+      "balance": null,
+      "card": null,
+      "datetime": "06МАЙ17",
+      "description": "ПЛАТА ЗА УСЛУГУ МОБИЛЬ",
+      "flow": "-",
+      "value": 60,
+      "vendor": null
+    }
+  },
+  {
+    "message": "04МАЙ 04МАЙ17 124453 SBERBANK ONL@IN PLATEZ RUR 505.00 505.00",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 2,
+    "transaction": {
+      "balance": null,
+      "card": null,
+      "datetime": "04МАЙ17",
+      "description": "SBERBANK ONL@IN PLATEZ",
+      "flow": "-",
+      "value": 505.00,
+      "vendor": null
+    }
+  }
+]

@@ -1,36 +1,31 @@
 {
-  "name": "sms-bank-parser",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "name": "bank-message-parser",
+  "version": "0.1.0",
+  "description": "Provide message received from bank and get structured object with info about transaction",
+  "main": "dist/index.js",
+  "types": "./index.d.ts",
   "scripts": {
-    "build": "babel main.js -d build",
-    "precommit": "lint-staged",
-    "start": "npm run webpack && node ./dist/bundle.js",
-    "test": "mocha --require babel-register",
-    "webpack": "webpack"
+    "build": "NODE_ENV=production webpack -p",
+    "build:dev": "webpack",
+    "get-messages": "node ./tools/get-messages.js",
+    "start": "npm run build && node ./dist/index.js",
+    "test": "mocha ./tests/**/*.spec.ts --require ts-node/register"
   },
-  "lint-staged": {
-    "*.js": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
+  "author": "Sergey Ulyashev",
+  "license": "Apache-2.0",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/chai": "^3.5.2",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "^7.0.22",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.0.0",
     "babel-preset-es2015": "^6.24.1",
-    "babel-preset-flow": "^6.23.0",
-    "babel-register": "^6.24.1",
-    "webpack": "^2.6.1"
-  },
-  "devDependencies": {
     "chai": "^3.5.0",
-    "husky": "^0.13.3",
-    "lint-staged": "^3.5.0",
     "mocha": "^3.4.2",
-    "prettier": "^1.3.1"
+    "ts-loader": "^2.1.0",
+    "ts-node": "^3.0.4",
+    "typescript": "^2.3.3",
+    "webpack": "^2.6.1"
   }
 }
