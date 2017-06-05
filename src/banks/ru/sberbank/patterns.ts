@@ -1,3 +1,6 @@
+// Copyright 2017-present Sergey Ulyashev and Contributors. Licensed under the Apache License v2.0
+// You may not use this file except in compliance with the License (http://www.apache.org/licenses/LICENSE-2.0)
+
 import { Pattern, Transaction } from '../../../types';
 import { capitalize } from '../../../utils';
 
