@@ -7,7 +7,7 @@
   "scripts": {
     "build": "NODE_ENV=production webpack -p",
     "build:dev": "webpack",
-    "get-messages": "node ./src/tools/get-messages.js",
+    "get-messages": "node ./tools/get-messages.js",
     "start": "npm run build && node ./dist/index.js",
     "test": "mocha ./tests/**/*.spec.ts --require ts-node/register"
   },
