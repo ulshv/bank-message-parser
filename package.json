@@ -1,6 +1,6 @@
 {
   "name": "bank-message-parser",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Provide message received from bank and get structured object with info about transaction",
   "main": "dist/index.js",
   "types": "./index.d.ts",

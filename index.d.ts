@@ -6,7 +6,11 @@ import {
   Parser,
 } from './src/types';
 
-export const getPatternFromMessage: (message: Message, bankId?: string) => Pattern;
-export const getTransaction: (message: Message, pattern: Pattern) => Transaction;
-declare const main: (message: Message, bankId?: string) => Transaction;
+export const getPatternFromMessage:
+  (message: Message, bankId?: string) => Pattern | void;
+export const getTransaction:
+  (message: Message, pattern: Pattern) => Transaction | void;
+declare const main:
+  (message: Message, bankId?: string) => Transaction | void;
+
 export default main;
