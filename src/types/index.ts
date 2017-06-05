@@ -31,4 +31,4 @@ export type TestCase = {
 
 export interface Parser {
   (data: RegExpMatchArray | null): Transaction;
-};
+}

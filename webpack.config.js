@@ -4,7 +4,7 @@ var webpack = require("webpack");
 module.exports = {
   entry: "./src/main.ts",
   output: {
-    filename: "bundle.js",
+    filename: "index.js",
     path: path.resolve(__dirname, "dist"),
     libraryTarget: "commonjs2"
   },

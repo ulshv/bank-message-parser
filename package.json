@@ -2,12 +2,13 @@
   "name": "bank-message-parser",
   "version": "0.1.0",
   "description": "Provide message received from bank and get structured object with info about transaction",
-  "main": "src/main.ts",
+  "main": "dist/index.js",
+  "types": "./index.d.ts",
   "scripts": {
     "build": "NODE_ENV=production webpack -p",
     "build:dev": "webpack",
     "get-messages": "node ./src/tools/get-messages.js",
-    "start": "npm run build && node ./dist/bundle.js",
+    "start": "npm run build && node ./dist/index.js",
     "test": "mocha ./tests/**/*.spec.ts --require ts-node/register"
   },
   "author": "Sergey Ulyashev",
