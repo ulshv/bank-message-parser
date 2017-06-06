@@ -60,6 +60,21 @@
     }
   },
   {
+    "message": "VISA1234 11.02.17 12:43 оплата услуг 100р MTS OAO Баланс: 1234.48р",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 1,
+    "transaction": {
+      "balance": 1234.48,
+      "card": "VISA1234",
+      "datetime": "2017-02-11T12:43:00+03:00",
+      "description": "Оплата услуг",
+      "flow": "-",
+      "unixtime": 1486806180,
+      "value": 100,
+      "vendor": "MTS OAO"
+    }
+  },
+  {
     "message": "10МАЙ 10МАЙ17 123456 SBOL RUR 1000.00 1000.00CR",
     "bank_id": "ru.sberbank",
     "pattern_id": 2,
