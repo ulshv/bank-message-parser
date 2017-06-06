@@ -6,9 +6,10 @@
     "transaction": {
       "balance": 1000.5,
       "card": "VISA1234",
-      "datetime": "15.05.17 12:45",
+      "datetime": "2017-05-15T12:45:00+03:00",
       "description": "Оплата услуг",
       "flow": "-",
+      "unixtime": 1494841500,
       "value": 100,
       "vendor": "TELE2"
     }
@@ -20,9 +21,10 @@
     "transaction": {
       "balance": 9500,
       "card": "VISA2345",
-      "datetime": "23.04.17 19:50",
+      "datetime": "2017-04-23T19:50:00+03:00",
       "description": "Покупка",
       "flow": "-",
+      "unixtime": 1492966200,
       "value": 19990,
       "vendor": "ELDORADO"
     }
@@ -34,9 +36,10 @@
     "transaction": {
       "balance": 21592.69,
       "card": "VISA3456",
-      "datetime": "05.02.17 16:55",
+      "datetime": "2017-02-05T16:55:00+03:00",
       "description": "Списание",
       "flow": "-",
+      "unixtime": 1486302900,
       "value": 2900,
       "vendor": null
     }
@@ -48,9 +51,10 @@
     "transaction": {
       "balance": 1344.85,
       "card": "VISA3423",
-      "datetime": "12.05.17 00:00",
+      "datetime": "2017-05-12T00:00:00+03:00",
       "description": "Зачисление",
       "flow": "+",
+      "unixtime": 1494536400,
       "value": 1000,
       "vendor": null
     }
@@ -62,9 +66,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "10МАЙ17",
+      "datetime": "2017-05-10T00:00:00+03:00",
       "description": null,
       "flow": "+",
+      "unixtime": 1494363600,
       "value": 1000,
       "vendor": "SBOL"
     }
@@ -76,9 +81,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "11МАЙ17",
+      "datetime": "2017-05-11T00:00:00+03:00",
       "description": null,
       "flow": "-",
+      "unixtime": 1494450000,
       "value": 990.9,
       "vendor": "ELDORADO"
     }
@@ -90,9 +96,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "31ДЕК16",
+      "datetime": "2016-12-31T00:00:00+03:00",
       "description": null,
       "flow": "-",
+      "unixtime": 1483131600,
       "value": 1000,
       "vendor": "ATM 12345"
     }
@@ -104,9 +111,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "06МАЙ17",
+      "datetime": "2017-05-06T00:00:00+03:00",
       "description": "ПЛАТА ЗА УСЛУГУ МОБИЛЬ",
       "flow": "-",
+      "unixtime": 1494018000,
       "value": 60,
       "vendor": null
     }
@@ -118,9 +126,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "04МАЙ17",
+      "datetime": "2017-05-04T00:00:00+03:00",
       "description": "SBERBANK ONL@IN PLATEZ",
       "flow": "-",
+      "unixtime": 1493845200,
       "value": 505.00,
       "vendor": null
     }

@@ -28,6 +28,7 @@ module.exports = {
       banner: require('fs')
         .readFileSync('./LICENSE', 'utf-8')
         .split('\n').slice(177, 190).join('\n')
-    })
+    }),
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/)
   ]
 };

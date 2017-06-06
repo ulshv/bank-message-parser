@@ -13,6 +13,7 @@ export type Transaction = {
   datetime: string,
   description: string | null,
   flow: '+' | '-', // income or expenses
+  unixtime: number,
   value: number,
   vendor: string | null,
 };
@@ -29,6 +30,11 @@ export type TestCase = {
   transaction: Transaction | null,
 };
 
+export type Props = {
+  bankId?: string,
+  timezone?: number,
+};
+
 export interface Parser {
-  (data: RegExpMatchArray | null): Transaction;
+  (data: RegExpMatchArray, props: Props): Transaction;
 }
