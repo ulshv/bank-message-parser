@@ -5,9 +5,11 @@ declare module "*test-cases.json" {
       transaction: {
         balance: number | null,
         card: string,
+        currency: string,
         datetime: string,
         description: string | null,
         flow: '+' | '-',
+        unixtime: number,
         value: number,
         subject: string | null
       } | null
