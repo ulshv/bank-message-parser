@@ -17,6 +17,7 @@ const patterns: Pattern[] = [
       return ({
         balance     : parseFloat(data[6]),
         card        : data[2],
+        currency    : "rub",
         datetime    : datetime.format(),
         description : 'Покупка',
         flow        : '-',
@@ -37,6 +38,7 @@ const patterns: Pattern[] = [
       return ({
         balance     : null,
         card        : null,
+        currency    : "rub",
         datetime    : datetime.format(),
         description : data[6] || data[8],
         flow        : data[3] ? '+' : '-',
@@ -58,6 +60,7 @@ const patterns: Pattern[] = [
       return ({
         balance     : parseFloat(data[8]),
         card        : data[2],
+        currency    : "rub",
         datetime    : date.format(),
         description : `Выписка от ${data[1]}. Проценты на остаток по счету и вознаграждение за операции покупок`,
         flow        : '+',

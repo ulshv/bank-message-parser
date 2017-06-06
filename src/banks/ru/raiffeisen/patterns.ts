@@ -16,6 +16,7 @@ const patterns: Pattern[] = [
       return ({
         balance     : parseFloat(data[6]),
         card        : data[1],
+        currency    : "rub",
         datetime    : date.format(),
         description : 'Покупка',
         flow        : '-',
