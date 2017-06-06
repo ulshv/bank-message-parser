@@ -6,6 +6,7 @@
     "transaction": {
       "balance": 5000,
       "card": "*4503",
+      "currency": "rub",
       "datetime": "2017-05-01T00:00:00+03:00",
       "description": "Покупка",
       "unixtime": 1493586000,
@@ -21,6 +22,7 @@
     "transaction": {
       "balance": 5000.96,
       "card": "*6597",
+      "currency": "rub",
       "datetime": "2017-05-01T00:00:00+03:00",
       "description": "Покупка",
       "flow": "-",
@@ -36,6 +38,7 @@
     "transaction": {
       "balance": 4234.46,
       "card": "*4683",
+      "currency": "rub",
       "datetime": "2017-05-04T00:00:00+03:00",
       "description": "Покупка",
       "flow": "-",

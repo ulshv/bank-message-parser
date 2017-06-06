@@ -16,6 +16,7 @@ const patterns: Pattern[] = [
       return ({
         balance     : parseFloat(data[8]),
         card        : data[1],
+        currency    : "rub",
         datetime    : datetime.format(),
         description : capitalize(data[3] || data[4]),
         flow        : data[4] ? '+' : '-',
@@ -37,6 +38,7 @@ const patterns: Pattern[] = [
       return ({
         balance     : null,
         card        : null,
+        currency    : "rub",
         datetime    : datetime.format(),
         description : data[5] || null,
         flow        : data[10] ? '+' : '-',
