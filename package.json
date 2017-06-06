@@ -13,10 +13,13 @@
   },
   "author": "Sergey Ulyashev",
   "license": "Apache-2.0",
-  "dependencies": {},
+  "dependencies": {
+    "moment": "^2.18.1"
+  },
   "devDependencies": {
     "@types/chai": "^3.5.2",
     "@types/mocha": "^2.2.41",
+    "@types/moment": "^2.13.0",
     "@types/node": "^7.0.22",
     "babel-cli": "^6.24.1",
     "babel-loader": "^7.0.0",
