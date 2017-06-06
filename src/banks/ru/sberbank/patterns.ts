@@ -8,7 +8,7 @@ const patterns: Pattern[] = [
   {
     id: 1,
     bank_id: "ru.sberbank",
-    regexp: /((?:VISA|MAESTRO)\d+) (\d{2}\.\d{2}\.\d{2} \d{2}:\d{2})\S* (?:(оплата услуг|покупка|списание)|(зачисление)) (\d+(?:\.\d+)?)(р)\s?([\w\sа-яё]*) Баланс: (\d+(?:\.\d+)?)р/i,
+    regexp: /((?:VISA|MAESTRO)\d+) (\d{2}\.\d{2}\.\d{2} \d{2}:\d{2})\S* (?:(оплата услуг|покупка|списание)|(зачисление)) (\d+(?:\.\d+)?)(р)\s?(.*) Баланс: (\d+(?:\.\d+)?)р/i,
 
     parser: (data: RegExpMatchArray, props: Props): Transaction => {
       const datetime = getMomentDate(data[2], 'DD.MM.YY hh:mm', props.timezone);
