@@ -6,9 +6,10 @@
     "transaction": {
       "balance": 3500.99,
       "card": "*1234",
-      "datetime": "13.05.2017 20:19",
+      "datetime": "2017-05-13T20:19:00+03:00",
       "description": "Покупка",
       "flow": "-",
+      "unixtime": 1494695940,
       "value": 447,
       "vendor": "LENTA, SYKTYVKAR"
     }
@@ -20,9 +21,10 @@
     "transaction": {
       "balance": 2904,
       "card": "*9876",
-      "datetime": "12.05.2017 21:30",
+      "datetime": "2017-05-12T21:30:00+03:00",
       "description": "Покупка",
       "flow": "-",
+      "unixtime": 1494613800,
       "value": 318,
       "vendor": "PYATEROCHKA 7078, SYKTYVKAR"
     }
@@ -34,9 +36,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "01.04.17 20:28",
+      "datetime": "2017-04-01T20:28:00+03:00",
       "description": "Оплата",
       "flow": "-",
+      "unixtime": 1491067680,
       "value": 100,
       "vendor": "PYATEROCHKA SYKTYVKAR RUS"
     }
@@ -48,9 +51,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "01.04.17 12:28",
+      "datetime": "2017-04-01T12:28:00+03:00",
       "description": "Оплата",
       "flow": "-",
+      "unixtime": 1491038880,
       "value": 1000,
       "vendor": "LUKOIL.AZS 123 10S SYKTYVKAR RUS"
     }
@@ -62,9 +66,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "29.04.17",
+      "datetime": "2017-04-29T00:00:00+03:00",
       "description": "Пополнение",
       "flow": "+",
+      "unixtime": 1493413200,
       "value": 1000,
       "vendor": "Карта другого банка"
     }
@@ -76,9 +81,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "29.04.17",
+      "datetime": "2017-04-29T00:00:00+03:00",
       "description": "Проценты на остаток по счету",
       "flow": "+",
+      "unixtime": 1493413200,
       "value": 100.12,
       "vendor": null
     }
@@ -90,9 +96,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "29.04.17",
+      "datetime": "2017-04-29T00:00:00+03:00",
       "description": "Вознаграждение за операции покупок",
       "flow": "+",
+      "unixtime": 1493413200,
       "value": 100,
       "vendor": null
     }
@@ -104,9 +111,10 @@
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "29.04.17",
+      "datetime": "2017-04-29T00:00:00+03:00",
       "description": "Плата за предоставление услуги SMS-банк",
       "flow": "-",
+      "unixtime": 1493413200,
       "value": 39,
       "vendor": null
     }
@@ -118,9 +126,10 @@
     "transaction": {
       "balance": 12345.67,
       "card": "*4321",
-      "datetime": "29.04",
+      "datetime": "2017-04-29T00:00:00+03:00",
       "description": "Выписка от 29.04. Проценты на остаток по счету и вознаграждение за операции покупок",
       "flow": "+",
+      "unixtime": 1493413200,
       "value": 246.9,
       "vendor": "Tinkoff"
     }
@@ -132,10 +141,26 @@
     "transaction": {
       "balance": 12345,
       "card": "*1234",
-      "datetime": "29.03",
+      "datetime": "2017-03-29T00:00:00+03:00",
       "description": "Выписка от 29.03. Проценты на остаток по счету и вознаграждение за операции покупок",
       "flow": "+",
+      "unixtime": 1490734800,
       "value": 246,
+      "vendor": "Tinkoff"
+    }
+  },
+  {
+    "message": "Vypiska ot 29.12 po karte *4231. Nachisleno protsentov: 234 rub. Cashback: 345 rub. Balans na 29.12: 4321 rub. Tinkoff.ru",
+    "bank_id": "ru.tinkoff",
+    "pattern_id": 3,
+    "transaction": {
+      "balance": 4321,
+      "card": "*4231",
+      "datetime": "2016-12-29T00:00:00+03:00",
+      "description": "Выписка от 29.12. Проценты на остаток по счету и вознаграждение за операции покупок",
+      "flow": "+",
+      "unixtime": 1482958800,
+      "value": 579,
       "vendor": "Tinkoff"
     }
   }
