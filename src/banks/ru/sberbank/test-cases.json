@@ -174,5 +174,21 @@
       "value": 505.00,
       "vendor": null
     }
+  },
+  {
+    "message": "VISA4321 06.03.17 оплата Мобильного банка за 06/03/2017-05/04/2017 60р Баланс: 1234.90р",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 3,
+    "transaction": {
+      "balance": 1234.90,
+      "card": "VISA4321",
+      "currency": "rub",
+      "datetime": "2017-03-06T00:00:00+03:00",
+      "description": "Оплата Мобильного банка за 06/03/2017-05/04/2017",
+      "flow": "-",
+      "unixtime": 1488747600,
+      "value": 60,
+      "vendor": null
+    }
   }
 ]

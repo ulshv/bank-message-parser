@@ -48,6 +48,27 @@ const patterns: Pattern[] = [
       } as Transaction)
     },
   },
+  {
+    id: 3,
+    bank_id: "ru.sberbank",
+    regexp: /((?:VISA|MAESTRO)\d+) (\d{2}\.\d{2}\.\d{2}) (оплата .*) (\d+(?:\.\d+)?)(р) Баланс: (\d+(?:\.\d+)?)р/i,
+
+    parser: (data: RegExpMatchArray, props: Props): Transaction => {
+      const datetime = getMomentDate(data[2], 'DD.MM.YY', props.timezone)
+
+      return ({
+        balance     : parseFloat(data[6]),
+        card        : data[1],
+        currency    : "rub",
+        datetime    : datetime.format(),
+        description : capitalize(data[3]),
+        flow        : '-',
+        unixtime    : datetime.unix(),
+        value       : parseFloat(data[4]),
+        vendor      : null,
+      } as Transaction)
+    },
+  },
 ];
 
 export default patterns;
