@@ -11,7 +11,7 @@ declare module "*test-cases.json" {
         flow: '+' | '-',
         unixtime: number,
         value: number,
-        subject: string | null
+        vendor: string | null
       } | null
     }>
 
