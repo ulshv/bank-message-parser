@@ -8,6 +8,7 @@
     "build": "NODE_ENV=production webpack -p",
     "build:dev": "webpack",
     "get-messages": "node ./tools/get-messages.js",
+    "test-messages": "node ./tools/test-messages.js",
     "start": "npm run build && node ./dist/index.js",
     "test": "mocha ./tests/**/*.spec.ts --require ts-node/register"
   },
