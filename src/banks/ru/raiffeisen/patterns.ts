@@ -21,7 +21,6 @@ const patterns: Pattern[] = [
         datetime    : date.format(),
         description : translations[data[2]],
         flow        : '-',
-        unixtime    : date.unix(),
         value       : parseFloat(data[4]),
         vendor      : data[3] || null,
       } as Transaction)

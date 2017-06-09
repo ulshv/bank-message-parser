@@ -21,7 +21,6 @@ const patterns: Pattern[] = [
         datetime    : datetime.format(),
         description : 'Покупка',
         flow        : '-',
-        unixtime    : datetime.unix(),
         value       : parseFloat(data[3]),
         vendor      : data[4] || null,
       } as Transaction)
@@ -42,7 +41,6 @@ const patterns: Pattern[] = [
         datetime    : datetime.format(),
         description : data[6] || data[8],
         flow        : data[3] ? '+' : '-',
-        unixtime    : datetime.unix(),
         value       : parseFloat(data[4].replace(/\s/g, '')),
         vendor      : data[7] || null,
       } as Transaction)
@@ -64,7 +62,6 @@ const patterns: Pattern[] = [
         datetime    : date.format(),
         description : `Выписка от ${data[1]}. Проценты на остаток по счету и вознаграждение за операции покупок`,
         flow        : '+',
-        unixtime    : date.unix(),
         value       : parseFloat((parseFloat(data[3]) + parseFloat(data[5])).toFixed(3)),
         vendor      : 'Tinkoff',
       } as Transaction)

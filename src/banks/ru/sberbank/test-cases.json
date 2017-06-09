@@ -10,7 +10,6 @@
       "datetime": "2017-05-15T12:45:00+03:00",
       "description": "Оплата услуг",
       "flow": "-",
-      "unixtime": 1494841500,
       "value": 100,
       "vendor": "TELE2"
     }
@@ -26,7 +25,6 @@
       "datetime": "2017-04-23T19:50:00+03:00",
       "description": "Покупка",
       "flow": "-",
-      "unixtime": 1492966200,
       "value": 19990,
       "vendor": "ELDORADO"
     }
@@ -42,7 +40,6 @@
       "datetime": "2017-02-05T16:55:00+03:00",
       "description": "Списание",
       "flow": "-",
-      "unixtime": 1486302900,
       "value": 2900,
       "vendor": null
     }
@@ -58,7 +55,6 @@
       "datetime": "2017-05-12T00:00:00+03:00",
       "description": "Зачисление",
       "flow": "+",
-      "unixtime": 1494536400,
       "value": 1000,
       "vendor": null
     }
@@ -74,7 +70,6 @@
       "datetime": "2017-02-11T12:43:00+03:00",
       "description": "Оплата услуг",
       "flow": "-",
-      "unixtime": 1486806180,
       "value": 100,
       "vendor": "MTS OAO"
     }
@@ -90,7 +85,6 @@
       "datetime": "2017-04-11T11:09:00+03:00",
       "description": "Покупка",
       "flow": "-",
-      "unixtime": 1491898140,
       "value": 111.72,
       "vendor": "WWW.ALIEXPRESS.COM"
     }
@@ -106,7 +100,6 @@
       "datetime": "2017-04-12T11:54:00+03:00",
       "description": "Выдача наличных",
       "flow": "-",
-      "unixtime": 1491987240,
       "value": 1234,
       "vendor": "ATM 123456"
     }
@@ -122,7 +115,6 @@
       "datetime": "2017-05-10T00:00:00+03:00",
       "description": null,
       "flow": "+",
-      "unixtime": 1494363600,
       "value": 1000,
       "vendor": "SBOL"
     }
@@ -138,7 +130,6 @@
       "datetime": "2017-05-11T00:00:00+03:00",
       "description": null,
       "flow": "-",
-      "unixtime": 1494450000,
       "value": 990.9,
       "vendor": "ELDORADO"
     }
@@ -154,7 +145,6 @@
       "datetime": "2016-12-31T00:00:00+03:00",
       "description": null,
       "flow": "-",
-      "unixtime": 1483131600,
       "value": 1000,
       "vendor": "ATM 12345"
     }
@@ -170,7 +160,6 @@
       "datetime": "2017-05-06T00:00:00+03:00",
       "description": "ПЛАТА ЗА УСЛУГУ МОБИЛЬ",
       "flow": "-",
-      "unixtime": 1494018000,
       "value": 60,
       "vendor": null
     }
@@ -186,7 +175,6 @@
       "datetime": "2017-05-04T00:00:00+03:00",
       "description": "SBERBANK ONL@IN PLATEZ",
       "flow": "-",
-      "unixtime": 1493845200,
       "value": 505.00,
       "vendor": null
     }
@@ -202,7 +190,6 @@
       "datetime": "2017-03-06T00:00:00+03:00",
       "description": "Оплата Мобильного банка за 06/03/2017-05/04/2017",
       "flow": "-",
-      "unixtime": 1488747600,
       "value": 60,
       "vendor": null
     }

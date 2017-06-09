@@ -9,7 +9,6 @@ declare module "*test-cases.json" {
         datetime: string,
         description: string | null,
         flow: '+' | '-',
-        unixtime: number,
         value: number,
         vendor: string | null
       } | null

@@ -14,7 +14,6 @@ export type Transaction = {
   datetime: string,
   description: string | null,
   flow: '+' | '-', // income or expenses
-  unixtime: number,
   value: number,
   vendor: string | null,
 };

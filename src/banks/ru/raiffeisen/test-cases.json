@@ -9,7 +9,6 @@
       "currency": "rub",
       "datetime": "2017-05-01T00:00:00+03:00",
       "description": "Покупка",
-      "unixtime": 1493586000,
       "flow": "-",
       "value": 354.5,
       "vendor": "RU/SYKTYVKAR/OKEY"
@@ -26,7 +25,6 @@
       "datetime": "2017-05-01T00:00:00+03:00",
       "description": "Покупка",
       "flow": "-",
-      "unixtime": 1493586000,
       "value": 543,
       "vendor": "RU/SYKTYVKAR/LENTA"
     }
@@ -42,7 +40,6 @@
       "datetime": "2017-05-04T00:00:00+03:00",
       "description": "Покупка",
       "flow": "-",
-      "unixtime": 1493845200,
       "value": 540,
       "vendor": "RU/MOSCOW/RAMBLER/KASSA"
     }
@@ -58,7 +55,6 @@
       "datetime": "2017-03-21T00:00:00+03:00",
       "description": "Снятие наличных",
       "flow": "-",
-      "unixtime": 1490043600,
       "value": 1234,
       "vendor": "RU/MOSCOW/RBA ATM 12345"
     }

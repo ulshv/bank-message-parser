@@ -20,7 +20,6 @@ const patterns: Pattern[] = [
         datetime    : datetime.format(),
         description : capitalize(data[3] || data[4]),
         flow        : data[4] ? '+' : '-',
-        unixtime    : datetime.unix(),
         value       : parseFloat(data[5]),
         vendor      : data[7] || null,
       } as Transaction)
@@ -42,7 +41,6 @@ const patterns: Pattern[] = [
         datetime    : datetime.format(),
         description : data[5] || null,
         flow        : data[10] ? '+' : '-',
-        unixtime    : datetime.unix(),
         value       : parseFloat(data[9]),
         vendor      : data[6] || null,
       } as Transaction)
@@ -63,7 +61,6 @@ const patterns: Pattern[] = [
         datetime    : datetime.format(),
         description : capitalize(data[3]),
         flow        : '-',
-        unixtime    : datetime.unix(),
         value       : parseFloat(data[4]),
         vendor      : null,
       } as Transaction)
