@@ -1,4 +1,2 @@
-Karta *1234; Snyatie nalichnih: RU/MOSCOW/RBA ATM 12345; 1234.00 RUR; Data: 11/04/2017; Dostupny Ostatok: 12345.67 RUR. Raiffeisenbank
 Balans vashey karty *4321 popolnilsya 21/03/2017 na 12345.00 RUR. Dostupny ostatok: 23456.78 RUR. Raiffeisenbank
 Zachislen perevod 12345.00 RUR na schet 12345678900000. Balans 23456.78 RUR. Raiffeisenbank
-Karta *1234; Pokupka: RU/MOSCOW/MORI BAR SYKT -2; 123.00 RUR; Data: 11/05/2017; Dostupny Ostatok: 12345.67 RUR. Raiffeisenbank

@@ -36,6 +36,10 @@ export type Props = {
   timezone?: number,
 };
 
+export type StringMap = {
+  [key: string]: string,
+}
+
 export interface Parser {
   (data: RegExpMatchArray, props: Props): Transaction;
 }

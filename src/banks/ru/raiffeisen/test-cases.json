@@ -46,5 +46,21 @@
       "value": 540,
       "vendor": "RU/MOSCOW/RAMBLER/KASSA"
     }
+  },
+  {
+    "message": "Karta *1234; Snyatie nalichnih: RU/MOSCOW/RBA ATM 12345; 1234.00 RUR; Data: 21/03/2017; Dostupny Ostatok: 12345.67 RUR. Raiffeisenbank",
+    "bank_id": "ru.raiffeisen",
+    "pattern_id": 1,
+    "transaction": {
+      "balance": 12345.67,
+      "card": "*1234",
+      "currency": "rub",
+      "datetime": "2017-03-21T00:00:00+03:00",
+      "description": "Снятие наличных",
+      "flow": "-",
+      "unixtime": 1490043600,
+      "value": 1234,
+      "vendor": "RU/MOSCOW/RBA ATM 12345"
+    }
   }
 ]

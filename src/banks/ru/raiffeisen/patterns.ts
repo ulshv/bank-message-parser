@@ -3,12 +3,13 @@
 
 import { Pattern, Transaction, Props } from '../../../types';
 import { getMomentDate } from '../../../utils';
+import { translations } from './constants';
 
 const patterns: Pattern[] = [
   {
     id: 1,
     bank_id: "ru.raiffeisen",
-    regexp: /Karta (\*\d+); (Pokupka): ([\w\d\s.,\/а-яё]*?); (\d+(?:\.\d+)?) RUR; Data: (\d+\/\d+\/\d+); Dostupny Ostatok: (\d+(?:\.\d+)?) RUR. Raiffeisenbank/i,
+    regexp: /Karta (\*\d+); (Pokupka|Snyatie nalichnih): ([^;]*); (\d+(?:\.\d+)?) RUR; Data: (\d+\/\d+\/\d+); Dostupny Ostatok: (\d+(?:\.\d+)?) RUR. Raiffeisenbank/i,
 
     parser: (data: RegExpMatchArray, props: Props): Transaction => {
       const date = getMomentDate(data[5], 'DD/MM/YYYY', props.timezone);
@@ -18,7 +19,7 @@ const patterns: Pattern[] = [
         card        : data[1],
         currency    : "rub",
         datetime    : date.format(),
-        description : 'Покупка',
+        description : translations[data[2]],
         flow        : '-',
         unixtime    : date.unix(),
         value       : parseFloat(data[4]),
