@@ -1,5 +1,3 @@
-export type Message = string;
-
 export type Pattern = {
   id: number,
   bank_id: string,
@@ -24,7 +22,7 @@ export type Bank = {
 };
 
 export type TestCase = {
-  message: Message,
+  message: string,
   bank_id: string | null,
   pattern_id: number | null,
   transaction: Transaction | null,

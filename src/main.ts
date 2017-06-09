@@ -1,7 +1,7 @@
 import banks, { banksById, patterns } from './banks';
-import { Message, Transaction, Props, Pattern } from './types';
+import { Transaction, Props, Pattern } from './types';
 
-export const getPatternFromMessage = (message: Message, props: Props = {})
+export const getPatternFromMessage = (message: string, props: Props = {})
 : Pattern | void => {
   const { bankId } = props;
   return patterns.find(pattern => (
@@ -10,13 +10,13 @@ export const getPatternFromMessage = (message: Message, props: Props = {})
   ));
 }
 
-export const getTransaction = (message: Message, pattern: Pattern, props: Props = {})
+export const getTransaction = (message: string, pattern: Pattern, props: Props = {})
 : Transaction | void => {
   const data = message.match(pattern.regexp);
   if (data) return pattern.parser(data, props);
 }
 
-const main = (message: Message, props?: Props)
+const main = (message: string, props?: Props)
 : Transaction | void => {
   const pattern = getPatternFromMessage(message, props);
   if (pattern) return getTransaction(message, pattern, props);
