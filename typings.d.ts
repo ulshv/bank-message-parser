@@ -1,7 +1,9 @@
 declare module "*test-cases.json" {
   const value: Array<{
       message: string,
+      bank_id: string | null,
       pattern_id: number | null,
+      timezone?: number | string | null,
       transaction: {
         balance: number | null,
         card: string,
@@ -9,7 +11,6 @@ declare module "*test-cases.json" {
         datetime: string,
         description: string | null,
         flow: '+' | '-',
-        unixtime: number,
         value: number,
         vendor: string | null
       } | null

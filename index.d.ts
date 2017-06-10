@@ -1,16 +1,15 @@
 import {
   Bank,
-  Message,
   Pattern,
   Transaction,
   Parser,
 } from './src/types';
 
 export const getPatternFromMessage:
-  (message: Message, bankId?: string) => Pattern | void;
+  (message: string, bankId?: string) => Pattern | void;
 export const getTransaction:
-  (message: Message, pattern: Pattern) => Transaction | void;
+  (message: string, pattern: Pattern, timezone: string) => Transaction | void;
 declare const main:
-  (message: Message, bankId?: string) => Transaction | void;
+  (message: string, props?: { bankId?: string, timezone?: number | string | null }) => Transaction | void;
 
 export default main;

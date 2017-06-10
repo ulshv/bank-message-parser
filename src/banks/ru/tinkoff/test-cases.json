@@ -3,6 +3,7 @@
     "message": "Pokupka. Karta *1234. Summa 447.00 RUB. LENTA, SYKTYVKAR. 13.05.2017 20:19. Dostupno 3500.99 RUB. Tinkoff.ru",
     "bank_id": "ru.tinkoff",
     "pattern_id": 1,
+    "timezone": 3,
     "transaction": {
       "balance": 3500.99,
       "card": "*1234",
@@ -10,7 +11,6 @@
       "datetime": "2017-05-13T20:19:00+03:00",
       "description": "Покупка",
       "flow": "-",
-      "unixtime": 1494695940,
       "value": 447,
       "vendor": "LENTA, SYKTYVKAR"
     }
@@ -19,6 +19,7 @@
     "message": "Pokupka. Karta *9876. Summa 318.00 RUB. PYATEROCHKA 7078, SYKTYVKAR. 12.05.2017 21:30. Dostupno 2904 RUB. Tinkoff.ru",
     "bank_id": "ru.tinkoff",
     "pattern_id": 1,
+    "timezone": 3,
     "transaction": {
       "balance": 2904,
       "card": "*9876",
@@ -26,7 +27,6 @@
       "datetime": "2017-05-12T21:30:00+03:00",
       "description": "Покупка",
       "flow": "-",
-      "unixtime": 1494613800,
       "value": 318,
       "vendor": "PYATEROCHKA 7078, SYKTYVKAR"
     }
@@ -35,6 +35,7 @@
     "message": "01.04.17 20:28 04.04.17 100.00 RUR 100.00 RUR Оплата в PYATEROCHKA SYKTYVKAR RUS",
     "bank_id": "ru.tinkoff",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
@@ -42,7 +43,6 @@
       "datetime": "2017-04-01T20:28:00+03:00",
       "description": "Оплата",
       "flow": "-",
-      "unixtime": 1491067680,
       "value": 100,
       "vendor": "PYATEROCHKA SYKTYVKAR RUS"
     }
@@ -51,6 +51,7 @@
     "message": "01.04.17 12:28 03.04.17 1 000.00 RUR 1 000.00 RUR Оплата в LUKOIL.AZS 123 10S SYKTYVKAR RUS",
     "bank_id": "ru.tinkoff",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
@@ -58,7 +59,6 @@
       "datetime": "2017-04-01T12:28:00+03:00",
       "description": "Оплата",
       "flow": "-",
-      "unixtime": 1491038880,
       "value": 1000,
       "vendor": "LUKOIL.AZS 123 10S SYKTYVKAR RUS"
     }
@@ -67,6 +67,7 @@
     "message": "29.04.17 29.04.17 +1 000.00 RUR +1 000.00 RUR Пополнение. Карта другого банка",
     "bank_id": "ru.tinkoff",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
@@ -74,7 +75,6 @@
       "datetime": "2017-04-29T00:00:00+03:00",
       "description": "Пополнение",
       "flow": "+",
-      "unixtime": 1493413200,
       "value": 1000,
       "vendor": "Карта другого банка"
     }
@@ -83,6 +83,7 @@
     "message": "29.04.17 29.04.17 +100.12 RUR Проценты на остаток по счету",
     "bank_id": "ru.tinkoff",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
@@ -90,7 +91,6 @@
       "datetime": "2017-04-29T00:00:00+03:00",
       "description": "Проценты на остаток по счету",
       "flow": "+",
-      "unixtime": 1493413200,
       "value": 100.12,
       "vendor": null
     }
@@ -99,6 +99,7 @@
     "message": "29.04.17 29.04.17 +100.00 RUR +100.00 RUR Вознаграждение за операции покупок",
     "bank_id": "ru.tinkoff",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
@@ -106,7 +107,6 @@
       "datetime": "2017-04-29T00:00:00+03:00",
       "description": "Вознаграждение за операции покупок",
       "flow": "+",
-      "unixtime": 1493413200,
       "value": 100,
       "vendor": null
     }
@@ -115,6 +115,7 @@
     "message": "29.04.17 29.04.17 39.00 RUR 39.00 RUR Плата за предоставление услуги SMS-банк",
     "bank_id": "ru.tinkoff",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
@@ -122,7 +123,6 @@
       "datetime": "2017-04-29T00:00:00+03:00",
       "description": "Плата за предоставление услуги SMS-банк",
       "flow": "-",
-      "unixtime": 1493413200,
       "value": 39,
       "vendor": null
     }
@@ -131,6 +131,7 @@
     "message": "Vypiska ot 29.04 po karte *4321. Nachisleno protsentov: 123.45 rub. Cashback: 123.45 rub. Balans na 29.04: 12345.67 rub. Tinkoff.ru",
     "bank_id": "ru.tinkoff",
     "pattern_id": 3,
+    "timezone": 3,
     "transaction": {
       "balance": 12345.67,
       "card": "*4321",
@@ -138,7 +139,6 @@
       "datetime": "2017-04-29T00:00:00+03:00",
       "description": "Выписка от 29.04. Проценты на остаток по счету и вознаграждение за операции покупок",
       "flow": "+",
-      "unixtime": 1493413200,
       "value": 246.9,
       "vendor": "Tinkoff"
     }
@@ -147,6 +147,7 @@
     "message": "Vypiska ot 29.03 po karte *1234. Nachisleno protsentov: 123 rub. Cashback: 123 rub. Balans na 29.03: 12345 rub. Tinkoff.ru",
     "bank_id": "ru.tinkoff",
     "pattern_id": 3,
+    "timezone": 3,
     "transaction": {
       "balance": 12345,
       "card": "*1234",
@@ -154,7 +155,6 @@
       "datetime": "2017-03-29T00:00:00+03:00",
       "description": "Выписка от 29.03. Проценты на остаток по счету и вознаграждение за операции покупок",
       "flow": "+",
-      "unixtime": 1490734800,
       "value": 246,
       "vendor": "Tinkoff"
     }
@@ -163,6 +163,7 @@
     "message": "Vypiska ot 29.12 po karte *4231. Nachisleno protsentov: 234 rub. Cashback: 345 rub. Balans na 29.12: 4321 rub. Tinkoff.ru",
     "bank_id": "ru.tinkoff",
     "pattern_id": 3,
+    "timezone": 3,
     "transaction": {
       "balance": 4321,
       "card": "*4231",
@@ -170,7 +171,6 @@
       "datetime": "2016-12-29T00:00:00+03:00",
       "description": "Выписка от 29.12. Проценты на остаток по счету и вознаграждение за операции покупок",
       "flow": "+",
-      "unixtime": 1482958800,
       "value": 579,
       "vendor": "Tinkoff"
     }

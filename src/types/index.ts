@@ -1,5 +1,3 @@
-export type Message = string;
-
 export type Pattern = {
   id: number,
   bank_id: string,
@@ -14,7 +12,6 @@ export type Transaction = {
   datetime: string,
   description: string | null,
   flow: '+' | '-', // income or expenses
-  unixtime: number,
   value: number,
   vendor: string | null,
 };
@@ -25,21 +22,23 @@ export type Bank = {
 };
 
 export type TestCase = {
-  message: Message,
+  message: string,
   bank_id: string | null,
   pattern_id: number | null,
+  timezone?: number | string | null,
   transaction: Transaction | null,
 };
 
 export type Props = {
   bankId?: string,
-  timezone?: number,
+  timezone?: number | string | null,
 };
 
 export type StringMap = {
   [key: string]: string,
 }
 
+
 export interface Parser {
-  (data: RegExpMatchArray, props: Props): Transaction;
+  (data: RegExpMatchArray, timezone: string): Transaction;
 }
