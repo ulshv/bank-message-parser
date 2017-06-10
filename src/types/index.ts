@@ -25,18 +25,20 @@ export type TestCase = {
   message: string,
   bank_id: string | null,
   pattern_id: number | null,
+  timezone?: number | string | null,
   transaction: Transaction | null,
 };
 
 export type Props = {
   bankId?: string,
-  timezone?: number,
+  timezone?: number | string | null,
 };
 
 export type StringMap = {
   [key: string]: string,
 }
 
+
 export interface Parser {
-  (data: RegExpMatchArray, props: Props): Transaction;
+  (data: RegExpMatchArray, timezone: string): Transaction;
 }
