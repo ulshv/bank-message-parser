@@ -31,8 +31,8 @@ export const getMomentDate = (
 )
 
 /**
- * Check if Moment object which was created only using day and month
- * should have previous year's value (e.g. 2016, not 2017).
+ * Check Moment object which was created only using day and month
+ * if it should have previous year's value (e.g. 2016, not 2017).
  * By default it has year from current system time.
  */
 export const isLastYear = (date: moment.Moment): boolean => {

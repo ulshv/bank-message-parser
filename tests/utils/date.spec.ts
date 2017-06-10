@@ -60,7 +60,7 @@ describe("utils/date.ts", () => {
   });
 
 
-  describe('parseTimezone', () => {
+  describe('parseTimezone()', () => {
     const testCases = [
       { input: 0,        timezone: 'Z' },
       { input: 100,      timezone: 'Z' },
