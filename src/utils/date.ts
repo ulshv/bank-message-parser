@@ -29,6 +29,8 @@ export const getMomentDate = (
   moment(date, format).utcOffset(timezone)
 )
 
-export const isLastYear = (date: moment.Moment, timezone: number = getSysTimezone()): boolean => (
-  moment().utcOffset(timezone).get('month') < date.get('month')
-);
+export const isLastYear = (date: moment.Moment): boolean => {
+  const now = moment().utcOffset(date._tzm || 0)
+  const dateWithTZ = date.utcOffset(date._tzm || 0);
+  return now.month() < dateWithTZ.month()
+}

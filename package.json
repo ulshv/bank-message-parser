@@ -10,7 +10,8 @@
     "get-messages": "node ./tools/get-messages.js",
     "test-messages": "node ./tools/test-messages.js",
     "start": "npm run build && node ./dist/index.js",
-    "test": "mocha ./tests/**/*.spec.ts --require ts-node/register"
+    "test": "mocha ./tests/**/*.spec.ts --require ts-node/register",
+    "test-file": "mocha --require ts-node/register"
   },
   "author": "Sergey Ulyashev",
   "license": "Apache-2.0",
