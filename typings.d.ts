@@ -1,3 +1,11 @@
+import * as moment from 'moment';
+
+declare module "moment" {
+  export interface Moment extends Object {
+    _tzm: number | undefined
+  }
+}
+
 declare module "*test-cases.json" {
   const value: Array<{
       message: string,
