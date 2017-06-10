@@ -19,14 +19,12 @@ export const getEngMonth = (month: string): string | void => (
   Object.keys(engMonthsRegexpMap).find(k => engMonthsRegexpMap[k].test(month))
 );
 
-const getSysTimezone = (): number => -(new Date()).getTimezoneOffset() / 60;
-
 export const getMomentDate = (
   date: string,
   format: string,
-  timezone: number = getSysTimezone()
+  timezone: string = "Z"
 ) : moment.Moment => (
-  moment(date, format).utcOffset(timezone)
+  moment(date + timezone, format + "Z").utcOffset(timezone)
 )
 
 export const isLastYear = (date: moment.Moment): boolean => {
