@@ -3,10 +3,12 @@
     "message": "VISA1234 15.05.17 12:45 оплата услуг 100р TELE2 Баланс: 1000.50р",
     "bank_id": "ru.sberbank",
     "pattern_id": 1,
+    "timezone": 3,
     "transaction": {
       "balance": 1000.5,
       "card": "VISA1234",
-      "datetime": "15.05.17 12:45",
+      "currency": "rub",
+      "datetime": "2017-05-15T12:45:00+03:00",
       "description": "Оплата услуг",
       "flow": "-",
       "value": 100,
@@ -17,10 +19,12 @@
     "message": "VISA2345 23.04.17 19:50 покупка 19990р ELDORADO Баланс: 9500р",
     "bank_id": "ru.sberbank",
     "pattern_id": 1,
+    "timezone": 3,
     "transaction": {
       "balance": 9500,
       "card": "VISA2345",
-      "datetime": "23.04.17 19:50",
+      "currency": "rub",
+      "datetime": "2017-04-23T19:50:00+03:00",
       "description": "Покупка",
       "flow": "-",
       "value": 19990,
@@ -31,10 +35,12 @@
     "message": "VISA3456 05.02.17 16:55 списание 2900р Баланс: 21592.69р",
     "bank_id": "ru.sberbank",
     "pattern_id": 1,
+    "timezone": 3,
     "transaction": {
       "balance": 21592.69,
       "card": "VISA3456",
-      "datetime": "05.02.17 16:55",
+      "currency": "rub",
+      "datetime": "2017-02-05T16:55:00+03:00",
       "description": "Списание",
       "flow": "-",
       "value": 2900,
@@ -45,10 +51,12 @@
     "message": "VISA3423 12.05.17 00:00МСК зачисление 1000р Баланс: 1344.85р",
     "bank_id": "ru.sberbank",
     "pattern_id": 1,
+    "timezone": 3,
     "transaction": {
       "balance": 1344.85,
       "card": "VISA3423",
-      "datetime": "12.05.17 00:00",
+      "currency": "rub",
+      "datetime": "2017-05-12T00:00:00+03:00",
       "description": "Зачисление",
       "flow": "+",
       "value": 1000,
@@ -56,13 +64,63 @@
     }
   },
   {
+    "message": "VISA1234 11.02.17 12:43 оплата услуг 100р MTS OAO Баланс: 1234.48р",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 1,
+    "timezone": 3,
+    "transaction": {
+      "balance": 1234.48,
+      "card": "VISA1234",
+      "currency": "rub",
+      "datetime": "2017-02-11T12:43:00+03:00",
+      "description": "Оплата услуг",
+      "flow": "-",
+      "value": 100,
+      "vendor": "MTS OAO"
+    }
+  },
+  {
+    "message": "VISA1234 11.04.17 11:09 покупка 111.72р WWW.ALIEXPRESS.COM Баланс: 1111.85р",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 1,
+    "timezone": 3,
+    "transaction": {
+      "balance": 1111.85,
+      "card": "VISA1234",
+      "currency": "rub",
+      "datetime": "2017-04-11T11:09:00+03:00",
+      "description": "Покупка",
+      "flow": "-",
+      "value": 111.72,
+      "vendor": "WWW.ALIEXPRESS.COM"
+    }
+  },
+  {
+    "message": "VISA4321 12.04.17 11:54 выдача наличных 1234р ATM 123456 Баланс: 4321.94р",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 1,
+    "timezone": 3,
+    "transaction": {
+      "balance": 4321.94,
+      "card": "VISA4321",
+      "currency": "rub",
+      "datetime": "2017-04-12T11:54:00+03:00",
+      "description": "Выдача наличных",
+      "flow": "-",
+      "value": 1234,
+      "vendor": "ATM 123456"
+    }
+  },
+  {
     "message": "10МАЙ 10МАЙ17 123456 SBOL RUR 1000.00 1000.00CR",
     "bank_id": "ru.sberbank",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "10МАЙ17",
+      "currency": "rub",
+      "datetime": "2017-05-10T00:00:00+03:00",
       "description": null,
       "flow": "+",
       "value": 1000,
@@ -73,10 +131,12 @@
     "message": "11МАЙ 12МАЙ17 123457 ELDORADO RUR 990.90 990.90",
     "bank_id": "ru.sberbank",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "11МАЙ17",
+      "currency": "rub",
+      "datetime": "2017-05-11T00:00:00+03:00",
       "description": null,
       "flow": "-",
       "value": 990.9,
@@ -87,10 +147,12 @@
     "message": "31ДЕК16 01ЯНВ17 123456 ATM 12345 RUR 1000.00 1000.00",
     "bank_id": "ru.sberbank",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "31ДЕК16",
+      "currency": "rub",
+      "datetime": "2016-12-31T00:00:00+03:00",
       "description": null,
       "flow": "-",
       "value": 1000,
@@ -101,10 +163,12 @@
     "message": "06МАЙ 08МАЙ17 000000 ПЛАТА ЗА УСЛУГУ МОБИЛЬ RUR 60.00 60.00",
     "bank_id": "ru.sberbank",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "06МАЙ17",
+      "currency": "rub",
+      "datetime": "2017-05-06T00:00:00+03:00",
       "description": "ПЛАТА ЗА УСЛУГУ МОБИЛЬ",
       "flow": "-",
       "value": 60,
@@ -115,13 +179,31 @@
     "message": "04МАЙ 04МАЙ17 124453 SBERBANK ONL@IN PLATEZ RUR 505.00 505.00",
     "bank_id": "ru.sberbank",
     "pattern_id": 2,
+    "timezone": 3,
     "transaction": {
       "balance": null,
       "card": null,
-      "datetime": "04МАЙ17",
+      "currency": "rub",
+      "datetime": "2017-05-04T00:00:00+03:00",
       "description": "SBERBANK ONL@IN PLATEZ",
       "flow": "-",
       "value": 505.00,
+      "vendor": null
+    }
+  },
+  {
+    "message": "VISA4321 06.03.17 оплата Мобильного банка за 06/03/2017-05/04/2017 60р Баланс: 1234.90р",
+    "bank_id": "ru.sberbank",
+    "pattern_id": 3,
+    "timezone": 3,
+    "transaction": {
+      "balance": 1234.90,
+      "card": "VISA4321",
+      "currency": "rub",
+      "datetime": "2017-03-06T00:00:00+03:00",
+      "description": "Оплата Мобильного банка за 06/03/2017-05/04/2017",
+      "flow": "-",
+      "value": 60,
       "vendor": null
     }
   }

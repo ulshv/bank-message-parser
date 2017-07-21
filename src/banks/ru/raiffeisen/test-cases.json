@@ -3,10 +3,12 @@
     "message": "Karta *4503; Pokupka: RU/SYKTYVKAR/OKEY; 354.50 RUR; Data: 01/05/2017; Dostupny Ostatok: 5000 RUR. Raiffeisenbank",
     "bank_id": "ru.raiffeisen",
     "pattern_id": 1,
+    "timezone": 3,
     "transaction": {
       "balance": 5000,
       "card": "*4503",
-      "datetime": "01/05/2017",
+      "currency": "rub",
+      "datetime": "2017-05-01T00:00:00+03:00",
       "description": "Покупка",
       "flow": "-",
       "value": 354.5,
@@ -17,10 +19,12 @@
     "message": "Karta *6597; Pokupka: RU/SYKTYVKAR/LENTA; 543.00 RUR; Data: 01/05/2017; Dostupny Ostatok: 5000.96 RUR. Raiffeisenbank",
     "bank_id": "ru.raiffeisen",
     "pattern_id": 1,
+    "timezone": 3,
     "transaction": {
       "balance": 5000.96,
       "card": "*6597",
-      "datetime": "01/05/2017",
+      "currency": "rub",
+      "datetime": "2017-05-01T00:00:00+03:00",
       "description": "Покупка",
       "flow": "-",
       "value": 543,
@@ -31,14 +35,32 @@
     "message": "Karta *4683; Pokupka: RU/MOSCOW/RAMBLER/KASSA; 540.00 RUR; Data: 04/05/2017; Dostupny Ostatok: 4234.46 RUR. Raiffeisenbank",
     "bank_id": "ru.raiffeisen",
     "pattern_id": 1,
+    "timezone": 3,
     "transaction": {
       "balance": 4234.46,
       "card": "*4683",
-      "datetime": "04/05/2017",
+      "currency": "rub",
+      "datetime": "2017-05-04T00:00:00+03:00",
       "description": "Покупка",
       "flow": "-",
       "value": 540,
       "vendor": "RU/MOSCOW/RAMBLER/KASSA"
+    }
+  },
+  {
+    "message": "Karta *1234; Snyatie nalichnih: RU/MOSCOW/RBA ATM 12345; 1234.00 RUR; Data: 21/03/2017; Dostupny Ostatok: 12345.67 RUR. Raiffeisenbank",
+    "bank_id": "ru.raiffeisen",
+    "pattern_id": 1,
+    "timezone": 3,
+    "transaction": {
+      "balance": 12345.67,
+      "card": "*1234",
+      "currency": "rub",
+      "datetime": "2017-03-21T00:00:00+03:00",
+      "description": "Снятие наличных",
+      "flow": "-",
+      "value": 1234,
+      "vendor": "RU/MOSCOW/RBA ATM 12345"
     }
   }
 ]

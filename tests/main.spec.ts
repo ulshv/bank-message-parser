@@ -31,18 +31,13 @@ describe("main.ts", () => {
     })
   });
 
-  describe("getTransaction()", () => {
+  describe("main()", () => {
     testCases.forEach(tc => {
-      if (tc.bank_id && tc.pattern_id) {
+      if (tc.bank_id) {
         const bank = banksById[tc.bank_id];
 
-        it(
-          `return Transaction for "${bank.id}" ` +
-          `on Message "${trimText(tc.message)}"`, () => {
-          if (tc.bank_id && tc.pattern_id) {
-            const pattern = banksById[tc.bank_id].patterns[tc.pattern_id - 1];
-            expect(getTransaction(tc.message, pattern)).to.eql(tc.transaction);
-          }
+        it(`return Transaction for "${bank.id}" on Message "${trimText(tc.message)}"`, () => {
+          expect(main(tc.message, { timezone: tc.timezone })).to.eql(tc.transaction);
         });
       }
     });
